@@ -56,7 +56,15 @@
       line-height: 1;
     }
 
-    .logo span { color: #888; }
+    
+.logo-image {
+  display: block;
+  width: 145px;
+  height: auto;
+  max-height: 55px;
+  object-fit: contain;
+}
+
 
     .nav-links {
       display: flex;
@@ -225,7 +233,13 @@
 
 <header>
   <nav class="container" aria-label="Main navigation">
-    <a href="#home" class="logo" aria-label="Sedigi home">sedigi<span>/</span></a>
+    
+<a href="#home" class="logo" aria-label="Sedigi home">
+  <img src="SEDIGI_Logo_White_Transparent.png"
+       alt="Sedigi"
+       class="logo-image">
+</a>
+
 
     <div class="nav-links">
       <a href="#services">Services</a>
