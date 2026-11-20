@@ -173,6 +173,7 @@
   </section>
 
   
+
 <!-- CREATIVE SHOWCASE -->
 
 <section>
@@ -188,97 +189,151 @@
     </p>
 
     <p class="muted">
-      From awareness campaigns to educational content,
-      these Sedigi examples demonstrate how consistent
-      branding can work across different formats.
+      From business promotions to educational content,
+      these Sedigi concepts demonstrate how consistent
+      branding can work across different messages.
     </p>
 
-    <div class="portfolio-grid">
+    <style>
+      .sedigi-social-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 36px;
+      }
 
-      <!-- Brand awareness -->
+      .sedigi-social-card {
+        min-width: 0;
+        overflow: hidden;
+        border: 1px solid #292929;
+        border-radius: 16px;
+        background: #141414;
+      }
 
-      <article class="portfolio-card">
-        <div class="portfolio-art social-art">
+      .sedigi-social-image {
+        aspect-ratio: 1 / 1;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .sedigi-social-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .sedigi-social-info {
+        padding: 24px;
+      }
+
+      .sedigi-social-info h3 {
+        margin: 10px 0;
+      }
+
+      .sedigi-social-info p {
+        margin-bottom: 0;
+        color: #aaa;
+        line-height: 1.65;
+      }
+
+      @media (max-width: 700px) {
+        .sedigi-social-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .sedigi-social-info {
+          padding: 20px;
+        }
+      }
+    </style>
+
+    <div class="sedigi-social-grid">
+
+      <!-- CONCEPT 01 -->
+
+      <article class="sedigi-social-card">
+        <div class="sedigi-social-image">
           <img
-            src="/assets/social-brand-awareness.png"
-            alt="Sedigi brand awareness social media design"
+            src="/assets/social/social-business-growth.png"
+            alt="Sedigi business growth promotional graphic"
             loading="lazy"
           >
         </div>
 
-        <div class="portfolio-info">
-          <span class="kicker">Concept 01</span>
-          <h3>Brand Awareness</h3>
+        <div class="sedigi-social-info">
+          <span class="kicker">Concept 01 / Brand awareness</span>
+          <h3>Your Next Chapter Starts Here</h3>
           <p>
-            Introduce your business with a clear
-            message, distinctive visual identity
-            and professional presentation.
+            A bold introduction to Sedigi's digital
+            services, using clear typography and
+            consistent brand colours.
           </p>
         </div>
       </article>
 
-      <!-- Service promotion -->
+      <!-- CONCEPT 02 -->
 
-      <article class="portfolio-card">
-        <div class="portfolio-art dark social-art">
+      <article class="sedigi-social-card">
+        <div class="sedigi-social-image">
           <img
-            src="/assets/social-websites.png"
-            alt="Sedigi website design promotional graphic"
+            src="/assets/social/social-website-design.png"
+            alt="Sedigi websites that work for you promotional graphic"
             loading="lazy"
           >
         </div>
 
-        <div class="portfolio-info">
-          <span class="kicker">Concept 02</span>
-          <h3>Service Promotion</h3>
+        <div class="sedigi-social-info">
+          <span class="kicker">Concept 02 / Service promotion</span>
+          <h3>Websites That Work for You</h3>
           <p>
-            Highlight an individual service through
-            focused messaging, purposeful imagery
-            and a clear call to action.
+            A focused service promotion combining
+            professional imagery, clear benefits
+            and a prominent call to action.
           </p>
         </div>
       </article>
 
-      <!-- Educational content -->
+      <!-- CONCEPT 03 -->
 
-      <article class="portfolio-card">
-        <div class="portfolio-art social-art">
+      <article class="sedigi-social-card">
+        <div class="sedigi-social-image">
           <img
-            src="/assets/social-educational.png"
-            alt="Sedigi educational infographic with three ways to improve online presence"
+            src="/assets/social/social-online-presence-tips.png"
+            alt="Sedigi three ways to improve your online presence infographic"
             loading="lazy"
           >
         </div>
 
-        <div class="portfolio-info">
-          <span class="kicker">Concept 03</span>
-          <h3>Educational Content</h3>
+        <div class="sedigi-social-info">
+          <span class="kicker">Concept 03 / Educational content</span>
+          <h3>Three Ways to Improve Your Online Presence</h3>
           <p>
-            Make useful information easy to understand
-            with clear layouts, practical advice
-            and consistent branding.
+            Useful business advice presented through
+            a structured, easy-to-follow infographic.
           </p>
         </div>
       </article>
 
-      <!-- Campaign creative -->
+      <!-- CONCEPT 04 -->
 
-      <article class="portfolio-card">
-        <div class="portfolio-art social-art">
+      <article class="sedigi-social-card">
+        <div class="sedigi-social-image">
           <img
-            src="/assets/social-campaign.png"
-            alt="Sedigi Your Next Chapter Starts Here campaign graphic"
+            src="/assets/social/social-online-presence-guide.png"
+            alt="Sedigi online presence educational social media graphic"
             loading="lazy"
           >
         </div>
 
-        <div class="portfolio-info">
-          <span class="kicker">Concept 04</span>
-          <h3>Campaign Creative</h3>
+        <div class="sedigi-social-info">
+          <span class="kicker">Concept 04 / Informational content</span>
+          <h3>Practical Digital Advice</h3>
           <p>
-            Build a recognisable campaign through
-            strong typography, coordinated colours
-            and a consistent creative direction.
+            An alternative educational presentation
+            demonstrating consistent visual identity
+            across informative content.
           </p>
         </div>
       </article>
@@ -286,13 +341,15 @@
     </div>
 
     <p class="portfolio-note">
-      Illustrative Sedigi social media concepts,
-      created to demonstrate different approaches
-      to professional content design.
+      Illustrative Sedigi social media concepts
+      created to demonstrate our approach to
+      professional content design.
     </p>
 
   </div>
 </section>
+
+
 
 
   <!-- BRAND CONSISTENCY -->
