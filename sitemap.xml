@@ -1,4 +1,5 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sedigi.co.uk/</loc>
@@ -8,5 +9,11 @@
   </url>
   <url>
     <loc>https://sedigi.co.uk/insights/website-costing-you-customers/</loc>
+  </url>
+  <url>
+    <loc>https://sedigi.co.uk/quote/</loc>
+  </url>
+  <url>
+    <loc>https://sedigi.co.uk/privacy/</loc>
   </url>
 </urlset>
