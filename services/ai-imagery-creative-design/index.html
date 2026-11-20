@@ -5,52 +5,102 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>AI Imagery & Creative Design | Sedigi</title>
-<meta name="description" content="AI-assisted imagery, creative concepts, campaign visuals and digital design from Sedigi. Distinctive visual content for businesses and brands.">
+<title>Affordable AI Website Imagery | Sedigi</title>
+<meta name="description" content="Affordable, realistic AI-generated website imagery for small businesses. No AI subscriptions or generation credits required. Bespoke imagery from Sedigi.">
 <meta name="theme-color" content="#090909">
 <link rel="canonical" href="https://sedigi.co.uk/services/ai-imagery-creative-design/">
 <link rel="icon" href="/favicon.ico">
 <link rel="stylesheet" href="/assets/services.css">
 
 <style>
-.ai-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:34px}
-.ai-card{overflow:hidden;background:#171717;border:1px solid #353535;border-radius:12px}
-.ai-art{height:340px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.ai-art:after{content:"";position:absolute;inset:0;pointer-events:none}
-.ai-art-content{position:relative;z-index:1;width:100%;height:100%;box-sizing:border-box}
-.ai-info{padding:25px}
-.ai-info h3{font-size:23px;margin:9px 0 12px}
-.ai-info p{color:#bbb;margin:0}
-.ai-label{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#aaa}
-.ai-art-one{background:linear-gradient(135deg,#d8d2c5,#8b897e)}
-.ai-art-one:after{background:radial-gradient(circle at 68% 40%,rgba(255,255,255,.25),transparent 55%)}
-.ai-product{position:absolute;width:130px;height:190px;background:linear-gradient(110deg,#292929,#111 48%,#414141 52%,#151515);border-radius:20px 20px 12px 12px;left:50%;top:50%;transform:translate(-50%,-43%) rotate(-7deg);box-shadow:22px 26px 32px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
-.ai-product:before{content:"";position:absolute;top:-17px;width:62px;height:22px;background:#222;border-radius:7px 7px 0 0}
-.ai-product span{color:#fff;font-size:22px;letter-spacing:4px;font-weight:800;transform:rotate(90deg)}
-.ai-art-caption{position:absolute;bottom:22px;left:24px;color:#222;font-size:11px;letter-spacing:2px;text-transform:uppercase}
-.ai-art-two{background:linear-gradient(145deg,#171c22,#2b3540 55%,#7e8587)}
-.ai-landscape{position:absolute;inset:0;background:radial-gradient(circle at 70% 28%,#e9c9a3 0 8%,transparent 9%),linear-gradient(160deg,transparent 54%,#202b32 54% 69%,transparent 69%),linear-gradient(24deg,transparent 45%,#111c24 45% 72%,transparent 72%),linear-gradient(to top,#0d151c 0 28%,transparent 28%)}
-.ai-landscape-text{position:absolute;top:28px;left:28px;color:#fff;font-size:38px;line-height:1.05;letter-spacing:-2px;font-weight:800}
-.ai-landscape-small{position:absolute;bottom:24px;right:24px;color:#fff;font-size:11px;letter-spacing:2px}
-.ai-art-three{background:#e8e7e1}
-.ai-campaign-circle{position:absolute;width:260px;height:260px;border-radius:50%;background:#b6cf55;top:50%;left:55%;transform:translate(-50%,-50%)}
-.ai-campaign-shape{position:absolute;width:170px;height:220px;background:#171717;border-radius:90px 90px 25px 25px;top:53%;left:55%;transform:translate(-50%,-50%) rotate(15deg);box-shadow:15px 15px 0 rgba(255,255,255,.5)}
-.ai-campaign-text{position:absolute;top:28px;left:25px;color:#151515;font-size:38px;line-height:.95;font-weight:900;letter-spacing:-2px}
-.ai-campaign-footer{position:absolute;bottom:23px;left:25px;color:#333;font-size:11px;text-transform:uppercase;letter-spacing:1px}
-.ai-art-four{background:linear-gradient(130deg,#171717,#4b3d43)}
-.ai-editorial-frame{position:absolute;inset:30px;border:1px solid rgba(255,255,255,.5)}
-.ai-editorial-circle{position:absolute;width:230px;height:230px;border-radius:50%;background:linear-gradient(120deg,#9b7c6b,#e7c8a7);left:50%;top:49%;transform:translate(-50%,-50%)}
-.ai-editorial-shadow{position:absolute;width:150px;height:200px;border-radius:90px 90px 15px 15px;background:#282023;left:50%;top:58%;transform:translate(-50%,-50%);box-shadow:25px 15px 0 rgba(0,0,0,.15)}
-.ai-editorial-text{position:absolute;top:28px;left:28px;color:#fff;font-size:13px;letter-spacing:4px;text-transform:uppercase}
-.ai-editorial-bottom{position:absolute;bottom:27px;right:28px;color:#fff;font-size:32px;letter-spacing:-1px;font-weight:700}
-.ai-process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px;margin-top:30px}
-.ai-process{background:#181818;border:1px solid #383838;border-radius:8px;padding:23px}
-.ai-process h3{font-size:19px;margin:11px 0}
-.ai-process p{color:#bbb;font-size:14px}
-.ai-disclosure{border:1px solid #444;border-radius:8px;padding:24px;margin-top:30px;background:#191919}
-.ai-disclosure p{color:#bbb;margin-bottom:0}
-@media(max-width:850px){.ai-process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.ai-gallery,.ai-process-grid{grid-template-columns:1fr}.ai-art{height:300px}.ai-landscape-text,.ai-campaign-text{font-size:31px}}
+.ai-comparison{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:24px;
+ margin-top:34px;
+}
+.ai-example{
+ background:#171717;
+ border:1px solid #353535;
+ border-radius:12px;
+ overflow:hidden;
+}
+.ai-example img{
+ display:block;
+ width:100%;
+ aspect-ratio:16/10;
+ object-fit:cover;
+}
+.ai-example-content{padding:25px}
+.ai-example-label{
+ color:#aaa;
+ font-size:12px;
+ text-transform:uppercase;
+ letter-spacing:1.3px;
+}
+.ai-example h3{font-size:23px;margin:12px 0}
+.ai-example p{color:#bbb;margin:0;line-height:1.7}
+.ai-benefits{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:20px;
+ margin-top:30px;
+}
+.ai-benefit{
+ padding:27px;
+ background:#181818;
+ border:1px solid #383838;
+ border-radius:10px;
+}
+.ai-benefit h3{font-size:21px;margin:10px 0}
+.ai-benefit p{color:#bbb;line-height:1.7}
+.ai-process{
+ display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:18px;
+ margin-top:30px;
+}
+.ai-step{
+ background:#181818;
+ border:1px solid #383838;
+ border-radius:9px;
+ padding:24px;
+}
+.ai-step h3{font-size:19px;margin:12px 0}
+.ai-step p{color:#bbb;font-size:14px;line-height:1.7}
+.ai-disclosure{
+ margin-top:28px;
+ padding:24px;
+ background:#191919;
+ border:1px solid #444;
+ border-radius:9px;
+}
+.ai-disclosure p{color:#bbb;margin:10px 0 0}
+.ai-checks{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:12px;
+ margin-top:22px;
+}
+.ai-check{
+ padding:15px 18px;
+ border:1px solid #3c3c3c;
+ border-radius:7px;
+ background:#1c1c1c;
+ color:#ddd;
+ font-size:14px;
+}
+.ai-check strong{color:#fff}
+@media(max-width:850px){
+ .ai-process{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+ .ai-comparison,.ai-benefits,.ai-process,.ai-checks{
+  grid-template-columns:1fr;
+ }
+ .ai-example-content{padding:20px}
+ .ai-example img{aspect-ratio:16/11}
+}
 </style>
 
 <script type="application/ld+json">
@@ -58,15 +108,23 @@
  "@context":"https://schema.org",
  "@type":"Service",
  "name":"AI Imagery & Creative Design",
- "serviceType":"AI-assisted image creation and digital creative design",
- "provider":{"@type":"Organization","name":"Sedigi","url":"https://sedigi.co.uk/"},
- "areaServed":{"@type":"Country","name":"United Kingdom"},
+ "serviceType":"Affordable AI-generated website imagery",
+ "provider":{
+  "@type":"Organization",
+  "name":"Sedigi",
+  "url":"https://sedigi.co.uk/"
+ },
+ "areaServed":{
+  "@type":"Country",
+  "name":"United Kingdom"
+ },
  "url":"https://sedigi.co.uk/services/ai-imagery-creative-design/"
 }
 </script>
 </head>
 
 <body>
+
 <header>
 <nav class="container" aria-label="Main navigation">
 <a href="/" aria-label="Sedigi homepage">
@@ -82,147 +140,388 @@
 </header>
 
 <main>
+
 <div class="container hero">
 <a class="back" href="/#services">← All services</a>
-<div class="eyebrow" style="margin-top:25px">Sedigi / AI Imagery & Creative Design</div>
-<h1>Creative thinking. New possibilities.</h1>
-<p class="lead">Standout imagery can help your business communicate ideas, develop campaigns and create a stronger visual identity.</p>
-<p class="muted">Sedigi combines creative direction, AI-assisted image generation and digital design to develop distinctive visual content suited to your brand and objectives.</p>
-<p class="muted">From early-stage concepts to finished marketing visuals, we focus on imagery that feels purposeful, consistent and professionally presented.</p>
-<a class="button" href="/quote/">Discuss Your Creative Project ↗</a>
+<div class="eyebrow" style="margin-top:25px">
+Sedigi / AI Imagery & Creative Design
+</div>
+
+<h1>Professional imagery. Without the premium price tag.</h1>
+
+<p class="lead">
+Starting a business is expensive enough. Professional photography
+isn't always within reach, but that shouldn't stop you from creating
+a website that looks credible, welcoming and professional.
+</p>
+
+<p class="muted">
+Sedigi creates bespoke AI-generated imagery for small businesses,
+helping you showcase your services, illustrate your work and bring
+your website to life without the expense of arranging a traditional
+photoshoot.
+</p>
+
+<p class="muted">
+We handle the technology, generation and refinement so you don't
+have to. No AI subscriptions to manage, no generation credits to
+purchase and no complicated software to learn.
+</p>
+
+<a class="button" href="/quote/">Discuss Your Imagery ↗</a>
 </div>
 
 <section>
 <div class="container">
-<div class="eyebrow">What we offer</div>
-<h2>Creative visuals for modern businesses.</h2>
-<p class="muted">Whether you need a campaign concept, product visual or supporting imagery for your website, we can explore an appropriate creative approach.</p>
-<div class="grid">
-<article class="panel"><span class="kicker">01 / Creative concepts</span><h3>AI-Assisted Image Creation</h3><p>Develop original visual concepts and illustrative imagery tailored to a creative brief.</p></article>
-<article class="panel"><span class="kicker">02 / Marketing</span><h3>Campaign Visuals</h3><p>Create striking imagery for digital campaigns, promotional materials and brand communications.</p></article>
-<article class="panel"><span class="kicker">03 / Products</span><h3>Product Concept Imagery</h3><p>Explore product presentation ideas, backgrounds and illustrative scenes without arranging a full photography shoot.</p></article>
-<article class="panel"><span class="kicker">04 / Websites</span><h3>Website & Social Imagery</h3><p>Develop visual assets suited to website sections, digital content and social media campaigns.</p></article>
-<article class="panel"><span class="kicker">05 / Refinement</span><h3>Image Editing & Enhancement</h3><p>Refine composition, presentation and visual consistency using suitable editing techniques and tools.</p></article>
-<article class="panel"><span class="kicker">06 / Exploration</span><h3>Creative Direction & Moodboards</h3><p>Explore visual styles, colour palettes and creative directions before committing to a final design.</p></article>
+
+<div class="eyebrow">The problem we solve</div>
+<h2>Great imagery shouldn't be out of reach.</h2>
+
+<p class="lead">
+Professional photography can be expensive. High-quality AI image
+generation can be too, particularly when subscriptions, credits
+and repeated attempts start adding up.
+</p>
+
+<p class="muted">
+Sedigi makes realistic website imagery more accessible. We create
+the images for you, refine them and prepare them for your website,
+all within an agreed project scope and fee.
+</p>
+
+<div class="ai-benefits">
+
+<article class="ai-benefit">
+<span class="kicker">01 / Affordability</span>
+<h3>Designed for smaller budgets</h3>
+<p>
+An accessible alternative for start-ups, sole traders and growing
+businesses that aren't ready to invest in professional photography.
+</p>
+</article>
+
+<article class="ai-benefit">
+<span class="kicker">02 / No subscriptions</span>
+<h3>We handle the AI tools</h3>
+<p>
+You won't need to purchase a premium AI subscription, manage
+generation credits or pay for image-generation software.
+</p>
+</article>
+
+<article class="ai-benefit">
+<span class="kicker">03 / Straightforward fees</span>
+<h3>Know what you're paying for</h3>
+<p>
+We agree the number of images, intended usage and revision
+allowance before starting. Additional requests can be quoted
+separately.
+</p>
+</article>
+
+<article class="ai-benefit">
+<span class="kicker">04 / Bespoke imagery</span>
+<h3>Relevant to your business</h3>
+<p>
+From care providers and hospitality businesses to trades and
+professional services, we develop imagery around your sector,
+brand and website requirements.
+</p>
+</article>
+
 </div>
 </div>
 </section>
 
 <section id="portfolio">
 <div class="container">
-<div class="eyebrow">Creative portfolio</div>
-<h2>One brief. Different creative directions.</h2>
-<p class="lead">Four illustrative directions demonstrating how different visual styles can communicate different ideas.</p>
-<p class="muted">These are original, fictional creative concepts designed for demonstration purposes. They do not represent commissioned customer work.</p>
 
-<div class="ai-gallery">
+<div class="eyebrow">Our work / AI imagery comparison</div>
 
-<article class="ai-card">
-<div class="ai-art ai-art-one" role="img" aria-label="Minimal fictional product concept with dark bottle on a neutral studio background">
-<div class="ai-art-content">
-<div class="ai-product"><span>FORM</span></div>
-<div class="ai-art-caption">01 / Product concept</div>
-</div>
-</div>
-<div class="ai-info">
-<div class="ai-label">Direction 01 / Product imagery</div>
-<h3>Studio Minimalism</h3>
-<p>A clean, considered approach to product presentation using restrained colour, lighting and composition.</p>
+<h2>Same idea. Different execution.</h2>
+
+<p class="lead">
+AI can generate an image in seconds. Creating one that represents
+your business convincingly takes more care.
+</p>
+
+<p class="muted">
+Both examples below were created using AI for the same fictional
+home-care scenario. The difference lies in creative direction,
+realism, composition and refinement.
+</p>
+
+<div class="ai-comparison">
+
+<article class="ai-example">
+<img
+ src="/assets/ai-imagery-basic-example.png"
+ alt="Illustrative basic AI-generated image of a care worker with an older woman"
+ loading="lazy"
+ width="1600"
+ height="1000">
+
+<div class="ai-example-content">
+<div class="ai-example-label">Example 01 / Basic generation</div>
+<h3>A generic AI result</h3>
+<p>
+A visually appealing image at first glance, but one with
+overly polished skin, a staged interaction and the familiar
+appearance of generic AI-generated stock photography.
+</p>
 </div>
 </article>
 
-<article class="ai-card">
-<div class="ai-art ai-art-two" role="img" aria-label="Stylised mountain landscape with warm sun and editorial headline">
-<div class="ai-art-content">
-<div class="ai-landscape"></div>
-<div class="ai-landscape-text">GO<br>BEYOND.</div>
-<div class="ai-landscape-small">02 / Campaign concept</div>
-</div>
-</div>
-<div class="ai-info">
-<div class="ai-label">Direction 02 / Campaign creative</div>
-<h3>Atmospheric Storytelling</h3>
-<p>Emotion-led imagery that combines atmosphere, typography and visual storytelling.</p>
+<article class="ai-example">
+<img
+ src="/assets/ai-imagery-sedigi-refined.png"
+ alt="Sedigi AI-generated home-care imagery showing a care worker interacting naturally with an older woman"
+ loading="lazy"
+ width="1600"
+ height="1000">
+
+<div class="ai-example-content">
+<div class="ai-example-label">Example 02 / Sedigi creative direction</div>
+<h3>A more natural result</h3>
+<p>
+A warmer, more believable interaction, with realistic skin
+texture, thoughtful lighting, relevant surroundings and
+a composition designed for a care provider's website.
+</p>
 </div>
 </article>
 
-<article class="ai-card">
-<div class="ai-art ai-art-three" role="img" aria-label="Contemporary lime and black abstract campaign composition">
-<div class="ai-art-content">
-<div class="ai-campaign-circle"></div>
-<div class="ai-campaign-shape"></div>
-<div class="ai-campaign-text">THINK<br>DIFFERENT.</div>
-<div class="ai-campaign-footer">03 / Contemporary visual direction</div>
 </div>
-</div>
-<div class="ai-info">
-<div class="ai-label">Direction 03 / Digital campaign</div>
-<h3>Bold & Contemporary</h3>
-<p>High-impact contrast, strong shapes and confident typography designed to attract attention.</p>
-</div>
-</article>
 
-<article class="ai-card">
-<div class="ai-art ai-art-four" role="img" aria-label="Warm-toned abstract editorial artwork with framed layout">
-<div class="ai-art-content">
-<div class="ai-editorial-frame"></div>
-<div class="ai-editorial-circle"></div>
-<div class="ai-editorial-shadow"></div>
-<div class="ai-editorial-text">The Edit / 2026</div>
-<div class="ai-editorial-bottom">A NEW<br>PERSPECTIVE.</div>
-</div>
-</div>
-<div class="ai-info">
-<div class="ai-label">Direction 04 / Editorial creative</div>
-<h3>Modern Editorial</h3>
-<p>A refined visual approach using balanced composition, warmer tones and editorial-style typography.</p>
-</div>
-</article>
-
+<div class="ai-checks">
+<div class="ai-check"><strong>Realism:</strong> More natural-looking people and environments.</div>
+<div class="ai-check"><strong>Composition:</strong> Imagery planned around website presentation.</div>
+<div class="ai-check"><strong>Branding:</strong> Clothing and visual details tailored to the brief.</div>
+<div class="ai-check"><strong>Consistency:</strong> Refinement across the agreed set of images.</div>
 </div>
 
 <div class="ai-disclosure">
-<strong>About AI-assisted imagery</strong>
-<p>These concepts demonstrate visual exploration rather than traditional photography. For commercial projects, we discuss appropriate usage, transparency, brand requirements and any relevant rights or licensing considerations before delivery. AI-generated images should not be presented as documentary evidence of real people, places, products or events.</p>
+<strong>About these examples</strong>
+<p>
+Both scenes are AI-generated illustrations featuring fictional
+people. They are not photographs of actual care workers or clients,
+and do not represent commissioned customer work. The examples
+demonstrate two different approaches to generating imagery, rather
+than a documented edit of one image into the other.
+</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="eyebrow">What we can create</div>
+<h2>Imagery that fits your website.</h2>
+
+<p class="lead">
+Every business has different visual needs. We create imagery
+around the story you want your website to tell.
+</p>
+
+<div class="grid">
+
+<article class="panel">
+<span class="kicker">01 / People & services</span>
+<h3>Service Illustrations</h3>
+<p>
+Realistic, fictional scenes that help visitors understand
+the type of service your business provides.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">02 / Website design</span>
+<h3>Homepage & Banner Images</h3>
+<p>
+Purpose-designed visuals that complement your website
+layout, headings and calls to action.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">03 / Business identity</span>
+<h3>Industry-Specific Imagery</h3>
+<p>
+Visuals suited to your sector, helping your website
+feel relevant rather than relying on generic stock images.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">04 / Consistency</span>
+<h3>Coordinated Image Collections</h3>
+<p>
+A consistent set of website visuals with complementary
+lighting, styling and creative direction.
+</p>
+</article>
+
 </div>
 </div>
 </section>
 
 <section>
 <div class="container">
-<div class="eyebrow">Our creative approach</div>
-<h2>Good creative work starts with a clear direction.</h2>
-<p class="lead">Technology can expand what's possible, but the brief, judgement and final presentation still matter.</p>
-<div class="ai-process-grid">
-<article class="ai-process"><span class="kicker">01 / Discover</span><h3>Understand the brief</h3><p>Discuss your audience, objectives, preferred style and intended use.</p></article>
-<article class="ai-process"><span class="kicker">02 / Explore</span><h3>Develop concepts</h3><p>Explore different visual directions and identify the strongest options.</p></article>
-<article class="ai-process"><span class="kicker">03 / Refine</span><h3>Improve the details</h3><p>Review composition, typography, consistency and overall quality.</p></article>
-<article class="ai-process"><span class="kicker">04 / Deliver</span><h3>Prepare the assets</h3><p>Supply the agreed visuals in suitable formats for their intended use.</p></article>
+
+<div class="eyebrow">How it works</div>
+<h2>Simple for you. Managed by us.</h2>
+
+<div class="ai-process">
+
+<article class="ai-step">
+<span class="kicker">01 / Discuss</span>
+<h3>Tell us what you need</h3>
+<p>
+Share your business details, industry, website plans
+and the type of imagery you're looking for.
+</p>
+</article>
+
+<article class="ai-step">
+<span class="kicker">02 / Agree</span>
+<h3>Confirm the scope</h3>
+<p>
+We'll agree the number of images, intended usage,
+deliverables, revisions and project fee.
+</p>
+</article>
+
+<article class="ai-step">
+<span class="kicker">03 / Create</span>
+<h3>We develop your images</h3>
+<p>
+We manage the AI generation process, select
+suitable results and refine the visuals.
+</p>
+</article>
+
+<article class="ai-step">
+<span class="kicker">04 / Deliver</span>
+<h3>Ready for your website</h3>
+<p>
+Receive the agreed images in suitable formats,
+with usage terms confirmed before delivery.
+</p>
+</article>
+
 </div>
 </div>
 </section>
 
 <section>
 <div class="container faq">
+
 <div class="eyebrow">Frequently asked questions</div>
 <h2>Good to know.</h2>
-<details><summary>Do you use AI to create the images?</summary><p>AI-assisted generation may be part of the creative process, alongside human direction, selection, editing and design. The approach depends on the project brief.</p></details>
-<details><summary>Can the imagery match our existing branding?</summary><p>Yes. Existing brand guidelines, colours, typography and visual references can help guide the creative direction and refinement process.</p></details>
-<details><summary>Can you create images for websites and social media?</summary><p>Yes. We can discuss the dimensions, composition and intended platforms so visuals are prepared for their intended use.</p></details>
-<details><summary>Can you edit or improve existing images?</summary><p>We can discuss suitable editing and enhancement options, depending on the source material, permissions and the changes required.</p></details>
-<details><summary>Can AI-generated imagery be used commercially?</summary><p>Commercial use depends on the tools used, their terms, the content involved and any relevant third-party rights. We discuss these considerations before delivering work for commercial use.</p></details>
-<details><summary>How much does creative imagery cost?</summary><p>Pricing depends on the number of visuals, complexity, refinement requirements and intended use. We'll provide a tailored quotation.</p></details>
+
+<details>
+<summary>Do you use AI to create the images?</summary>
+<p>
+Yes. This is specifically an AI imagery service. Sedigi uses AI
+image-generation tools to create bespoke visuals based on your
+business, industry and requirements, then reviews and refines
+the results for your website.
+</p>
+</details>
+
+<details>
+<summary>Will I need an AI subscription?</summary>
+<p>
+No. Sedigi handles the image-generation process. You pay the
+agreed project fee without needing your own AI subscription,
+generation credits or specialist software.
+</p>
+</details>
+
+<details>
+<summary>Will I have recurring image-generation charges?</summary>
+<p>
+No recurring image-generation charges are payable to Sedigi
+for using your delivered images under the agreed usage terms.
+New images or work outside the agreed project scope would be
+quoted separately.
+</p>
+</details>
+
+<details>
+<summary>Can you create images for my type of business?</summary>
+<p>
+We can discuss imagery for many sectors, including home care,
+hospitality, trades and professional services. Each project
+is assessed against your requirements and the suitability
+of AI-generated imagery for the intended purpose.
+</p>
+</details>
+
+<details>
+<summary>Can the images include my branding?</summary>
+<p>
+Where suitable, we can incorporate brand colours, uniforms,
+settings and other relevant visual details. Logos and important
+text may require separate design work to ensure accuracy.
+</p>
+</details>
+
+<details>
+<summary>Are these photographs of real people?</summary>
+<p>
+No. AI-generated scenes featuring fictional people are
+illustrative rather than documentary photography. They
+should not be presented as actual employees, customers,
+completed projects or real events.
+</p>
+</details>
+
+<details>
+<summary>Can I use the images commercially?</summary>
+<p>
+We discuss intended usage and applicable tool terms,
+licensing conditions and third-party rights before delivery.
+The agreed usage rights will be confirmed as part of your project.
+</p>
+</details>
+
+<details>
+<summary>How much does AI imagery cost?</summary>
+<p>
+Pricing depends on the number of images, complexity,
+required refinements and intended usage. We provide
+a tailored project quotation rather than requiring
+you to purchase an AI-generation subscription.
+</p>
+</details>
+
 </div>
 </section>
 
 <section class="cta">
 <div class="container">
-<div class="eyebrow">Bring your ideas to life</div>
-<h2>Have a creative idea in mind?</h2>
-<p class="lead">Whether it's a single campaign visual or a collection of branded imagery, let's explore what we can create.</p>
+
+<div class="eyebrow">Affordable website imagery</div>
+<h2>Make your website look the part.</h2>
+
+<p class="lead">
+Professional-looking imagery doesn't have to mean
+professional photography prices or ongoing AI subscriptions.
+</p>
+
+<p class="muted">
+Tell us about your business and the images you need.
+We'll help you explore a practical, affordable solution.
+</p>
+
 <a class="button" href="/quote/">Request a Quote ↗</a>
+
 </div>
 </section>
+
 </main>
 
 <footer>
@@ -232,5 +531,6 @@
 <span>Reliable by Nature. Digital by Design.</span>
 </div>
 </footer>
+
 </body>
 </html>
