@@ -270,3 +270,123 @@ footer {
   .panel { padding: 22px; }
   .full { grid-column: auto; }
 }
+
+/* Sedigi portfolio showcases */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 34px;
+}
+
+.portfolio-card {
+  overflow: hidden;
+  background: #171717;
+  border: 1px solid #353535;
+  border-radius: 12px;
+}
+
+.portfolio-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eeede9;
+  padding: 18px;
+}
+
+.portfolio-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.portfolio-art.dark {
+  background: #101010;
+}
+
+.portfolio-art.official {
+  min-height: 300px;
+  background: #080808;
+}
+
+.portfolio-art.official img {
+  width: min(75%, 320px);
+}
+
+.portfolio-info {
+  padding: 24px;
+}
+
+.portfolio-info h3 {
+  margin: 8px 0 12px;
+}
+
+.portfolio-info p {
+  color: #bcbcbc;
+  margin: 0;
+}
+
+.portfolio-note {
+  margin-top: 24px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Individual quadrants from the approved
+   four-concept branding image.
+   The incorrect original logo is excluded. */
+
+.brand-concept {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-image: url("/assets/branding-concepts.png");
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  border-radius: 5px;
+}
+
+.brand-heritage {
+  background-position: right top;
+}
+
+.brand-illustration {
+  background-position: left bottom;
+}
+
+.brand-contemporary {
+  background-position: right bottom;
+}
+
+/* Social media image presentation */
+
+.social-art {
+  min-height: 200px;
+}
+
+.social-art img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Responsive layout */
+
+@media (max-width: 720px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .portfolio-art {
+    padding: 12px;
+  }
+
+  .portfolio-art.official {
+    min-height: 230px;
+  }
+
+  .portfolio-info {
+    padding: 20px;
+  }
+}
