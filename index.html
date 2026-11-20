@@ -165,6 +165,24 @@
     }
 
     .service:hover { border-color: #888; }
+    
+.service-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-link:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+
+.service-link h3::after {
+  content: " ↗";
+  font-size: 18px;
+  color: #999;
+}
+
 
     .service-number {
       font-size: 12px;
@@ -316,75 +334,77 @@
       </p>
 
 
+
 <div class="services">
 
-  <article class="service">
+  <a class="service service-link" href="/services/branding-logo-design/">
     <div class="service-number">01 /</div>
     <h3>Branding & Logo Design</h3>
     <p>
       Distinctive logos, brand identities and visual assets
       that help your business make the right impression.
     </p>
-  </article>
+  </a>
 
-  <article class="service">
+  <a class="service service-link" href="/services/social-media-design-content/">
     <div class="service-number">02 /</div>
     <h3>Social Media Design & Content</h3>
     <p>
       Professional graphics, branded templates and
       engaging content tailored to your audience.
     </p>
-  </article>
+  </a>
 
-  <article class="service">
+  <a class="service service-link" href="/services/website-design/">
     <div class="service-number">03 /</div>
     <h3>Website Design & Development</h3>
     <p>
       Modern, responsive websites designed around your
       business, your customers and your goals.
     </p>
-  </article>
+  </a>
 
-  <article class="service">
+  <a class="service service-link" href="/services/automation-business-tools/">
     <div class="service-number">04 /</div>
     <h3>Automation & Business Tools</h3>
     <p>
       Custom spreadsheets, reporting dashboards and
       practical automation to simplify everyday tasks.
     </p>
-  </article>
+  </a>
 
-  <article class="service">
+  <a class="service service-link" href="/services/seo-geo-content/">
     <div class="service-number">05 /</div>
     <h3>SEO, GEO & Content Creation</h3>
     <p>
       Search optimisation, blog writing and content
       designed for traditional and AI-powered discovery.
     </p>
-  </article>
+  </a>
 
-  <article class="service">
+  <a class="service service-link" href="/services/business-documents-templates/">
     <div class="service-number">06 /</div>
     <h3>Business Documents & Templates</h3>
     <p>
-      Professional presentations, reports, proposals
-      and branded documents tailored to your needs.
+      Professional reports, proposals, presentations,
+      branded templates and email signatures.
     </p>
-  </article>
+  </a>
 
-  <article class="service">
+  <a class="service service-link" href="/services/ai-imagery-creative-design/">
     <div class="service-number">07 /</div>
     <h3>AI Imagery & Creative Design</h3>
     <p>
       High-quality AI-generated visuals for websites,
       marketing campaigns and creative projects.
     </p>
-  </article>
+  </a>
 
 </div>
 </div>
 
 </section>
+
 
 <section id="about">
     <div class="container about-grid">
