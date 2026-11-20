@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+
+  <title>Digital Health Check — £49 | Sedigi</title>
+
+  <meta name="description" content="Get a personalised 10-page Digital Health Check from Sedigi for £49. Review your website, SEO, online credibility and opportunities for improvement.">
+
+  <link rel="canonical" href="https://sedigi.co.uk/services/digital-health-check/">
+  <link rel="icon" href="/favicon.ico?v=5">
+
+  <link rel="stylesheet" href="/assets/services.css">
+
+  <style>
+    :root {
+      --check-bg: #090909;
+      --check-panel: #141414;
+      --check-border: #303030;
+      --check-muted: #aaa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--check-bg);
+      color: #f5f5f5;
+    }
+
+    .check-container {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .check-hero {
+      padding: 105px 0 95px;
+    }
+
+    .check-eyebrow {
+      color: #aaa;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .check-hero h1 {
+      max-width: 900px;
+      font-size: clamp(48px, 7vw, 90px);
+      line-height: 1.04;
+      letter-spacing: -0.065em;
+      margin: 0 0 28px;
+    }
+
+    .check-lead {
+      max-width: 720px;
+      color: #bbb;
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.65;
+    }
+
+    .check-price-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin: 36px 0 12px;
+    }
+
+    .check-price {
+      font-size: 56px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -3px;
+    }
+
+    .check-price-note {
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .check-button {
+      display: inline-block;
+      background: #fff;
+      color: #090909;
+      border: 1px solid #fff;
+      padding: 15px 25px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: .2s ease;
+    }
+
+    .check-button:hover {
+      background: transparent;
+      color: #fff;
+    }
+
+    .check-button-secondary {
+      background: transparent;
+      color: #fff;
+      border-color: #666;
+    }
+
+    .check-button-secondary:hover {
+      background: #fff;
+      color: #090909;
+    }
+
+    .check-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .check-section {
+      border-top: 1px solid var(--check-border);
+      padding: 85px 0;
+    }
+
+    .check-section h2 {
+      font-size: clamp(34px, 4.5vw, 56px);
+      line-height: 1.12;
+      letter-spacing: -0.05em;
+      margin: 12px 0 24px;
+    }
+
+    .check-intro {
+      max-width: 720px;
+      color: #aaa;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .check-card {
+      background: var(--check-panel);
+      border: 1px solid var(--check-border);
+      padding: 30px;
+    }
+
+    .check-card-number {
+      color: #888;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .check-card h3 {
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      margin: 18px 0 12px;
+    }
+
+    .check-card p {
+      color: #aaa;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .check-report {
+      margin-top: 40px;
+      border: 1px solid #444;
+      background: #101010;
+      overflow: hidden;
+    }
+
+    .check-report-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 24px 30px;
+      border-bottom: 1px solid #333;
+    }
+
+    .check-report-header strong {
+      font-size: 20px;
+    }
+
+    .check-report-header span {
+      font-size: 12px;
+      color: #aaa;
+      letter-spacing: 1px;
+    }
+
+    .check-report-row {
+      display: grid;
+      grid-template-columns: 80px minmax(0, 1fr);
+      gap: 18px;
+      padding: 21px 30px;
+      border-bottom: 1px solid #292929;
+    }
+
+    .check-report-row:last-child {
+      border-bottom: 0;
+    }
+
+    .check-report-number {
+      color: #888;
+      font-size: 13px;
+      padding-top: 3px;
+    }
+
+    .check-report-row h3 {
+      margin: 0 0 7px;
+      font-size: 17px;
+      letter-spacing: -0.3px;
+    }
+
+    .check-report-row p {
+      color: #aaa;
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .check-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .check-step {
+      border-top: 2px solid #fff;
+      padding: 22px 5px 10px 0;
+    }
+
+    .check-step span {
+      color: #888;
+      font-size: 13px;
+    }
+
+    .check-step h3 {
+      font-size: 21px;
+      margin: 16px 0 10px;
+    }
+
+    .check-step p {
+      color: #aaa;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .check-faq {
+      margin-top: 35px;
+      border-top: 1px solid #333;
+    }
+
+    .check-faq details {
+      border-bottom: 1px solid #333;
+      padding: 22px 0;
+    }
+
+    .check-faq summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 17px;
+      padding-right: 15px;
+    }
+
+    .check-faq details p {
+      color: #aaa;
+      max-width: 780px;
+      line-height: 1.7;
+      margin: 14px 0 0;
+    }
+
+    .check-cta {
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .check-cta h2 {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .check-cta .check-intro {
+      margin-inline: auto;
+    }
+
+    .check-cta .check-actions {
+      justify-content: center;
+    }
+
+    .check-small {
+      color: #888;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .check-footer {
+      border-top: 1px solid #303030;
+      padding: 28px 0;
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .check-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 700px) {
+      .check-hero {
+        padding: 70px 0;
+      }
+
+      .check-section {
+        padding: 65px 0;
+      }
+
+      .check-grid,
+      .check-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .check-report-row {
+        grid-template-columns: 45px minmax(0, 1fr);
+        padding: 20px;
+        gap: 12px;
+      }
+
+      .check-report-header {
+        padding: 20px;
+      }
+
+      .check-card {
+        padding: 25px;
+      }
+
+      .check-cta {
+        padding: 75px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .check-button {
+        transition: none;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Digital Health Check",
+    "description": "A personalised 10-page review of a business's public-facing website and digital presence.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Sedigi",
+      "url": "https://sedigi.co.uk/"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "49.00",
+      "priceCurrency": "GBP",
+      "url": "https://sedigi.co.uk/services/digital-health-check/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container" aria-label="Main navigation">
+
+      <a href="/" class="logo" aria-label="Sedigi home">
+        <img
+          src="/SEDIGI_Logo_White_Transparent.png"
+          alt="sedigi/"
+          class="logo-image"
+        >
+      </a>
+
+      <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#about">About</a>
+        <a href="/insights/">Insights</a>
+        <a href="/#contact">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <div class="check-container check-hero">
+
+      <div class="check-eyebrow">
+        Service 08 / Digital Health Check
+      </div>
+
+      <h1>
+        How healthy is your<br>
+        digital presence?
+      </h1>
+
+      <p class="check-lead">
+        Your website might look good, but is it working
+        as effectively as it could? Discover what's working,
+        what needs attention and where your business
+        could improve online.
+      </p>
+
+      <div class="check-price-row">
+        <div class="check-price">£49</div>
+
+        <div class="check-price-note">
+          One-off fixed price<br>
+          Personalised 10-page PDF report
+        </div>
+      </div>
+
+      <div class="check-actions">
+        <a
+          href="mailto:hello@sedigi.co.uk?subject=Digital%20Health%20Check%20-%20%C2%A349%20Enquiry&amp;body=Hello%20Sedigi%2C%0A%0AI%20would%20like%20to%20request%20a%20Digital%20Health%20Check.%0A%0ABusiness%20name%3A%20%0AWebsite%20address%3A%20%0AContact%20name%3A%20%0A%0AThank%20you."
+          class="check-button"
+        >
+          Request Your Health Check ↗
+        </a>
+
+        <a href="#report" class="check-button check-button-secondary">
+          See What's Included
+        </a>
+      </div>
+
+      <p class="check-small">
+        No subscription. No obligation to purchase further services.
+        Requests are confirmed before any payment is taken.
+      </p>
+
+    </div>
+
+    <!-- INTRODUCTION -->
+
+    <section class="check-section">
+      <div class="check-container">
+
+        <div class="check-eyebrow">
+          01 / The service
+        </div>
+
+        <h2>
+          A clearer picture.<br>
+          Better decisions.
+        </h2>
+
+        <p class="check-intro">
+          It's easy to become accustomed to your own website
+          and overlook things that could be confusing visitors,
+          limiting visibility or making it harder for customers
+          to get in touch.
+        </p>
+
+        <p class="check-intro">
+          Sedigi's Digital Health Check provides an independent,
+          structured review of your public-facing digital presence.
+          We assess key areas, explain our observations in
+          straightforward language and identify practical priorities.
+        </p>
+
+        <div class="check-grid">
+
+          <article class="check-card">
+            <div class="check-card-number">01 /</div>
+            <h3>Website Experience</h3>
+            <p>
+              Navigation, mobile usability, page layout,
+              clarity and the overall visitor journey.
+            </p>
+          </article>
+
+          <article class="check-card">
+            <div class="check-card-number">02 /</div>
+            <h3>Performance & Accessibility</h3>
+            <p>
+              Publicly testable loading performance,
+              accessibility fundamentals and technical observations.
+            </p>
+          </article>
+
+          <article class="check-card">
+            <div class="check-card-number">03 /</div>
+            <h3>Search Visibility</h3>
+            <p>
+              On-page SEO basics, page titles, content structure
+              and publicly observable search discoverability.
+            </p>
+          </article>
+
+          <article class="check-card">
+            <div class="check-card-number">04 /</div>
+            <h3>Online Credibility</h3>
+            <p>
+              Contact information, trust signals, business
+              listings and consistency across your online presence.
+            </p>
+          </article>
+
+          <article class="check-card">
+            <div class="check-card-number">05 /</div>
+            <h3>Customer Enquiries</h3>
+            <p>
+              Calls to action, contact routes and potential
+              friction in turning website visits into enquiries.
+            </p>
+          </article>
+
+          <article class="check-card">
+            <div class="check-card-number">06 /</div>
+            <h3>Improvement Priorities</h3>
+            <p>
+              Clear, ranked recommendations to help you
+              understand which issues deserve attention first.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TEN PAGE REPORT -->
+
+    <section class="check-section" id="report">
+      <div class="check-container">
+
+        <div class="check-eyebrow">
+          02 / Your deliverable
+        </div>
+
+        <h2>
+          Ten pages.<br>
+          A clearer way forward.
+        </h2>
+
+        <p class="check-intro">
+          You'll receive a personalised, professionally
+          presented PDF report. Each section explains what
+          was reviewed, what was found and what those findings
+          could mean for your business.
+        </p>
+
+        <div class="check-report">
+
+          <div class="check-report-header">
+            <strong>Digital Health Check</strong>
+            <span>REPORT CONTENTS / 10 PAGES</span>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">01</div>
+            <div>
+              <h3>Cover & Business Overview</h3>
+              <p>
+                Your business, website address and review date.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">02</div>
+            <div>
+              <h3>Executive Summary</h3>
+              <p>
+                A concise overview of strengths, concerns
+                and the most important observations.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">03</div>
+            <div>
+              <h3>Website Design & User Experience</h3>
+              <p>
+                Layout, navigation, mobile experience
+                and ease of use.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">04</div>
+            <div>
+              <h3>Website Performance</h3>
+              <p>
+                Publicly measurable speed, accessibility
+                and technical fundamentals.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">05</div>
+            <div>
+              <h3>SEO & Search Visibility</h3>
+              <p>
+                Search-friendly content, metadata,
+                page structure and discoverability.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">06</div>
+            <div>
+              <h3>Local & Online Presence</h3>
+              <p>
+                Relevant public business listings,
+                social links and brand consistency.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">07</div>
+            <div>
+              <h3>Trust & Credibility</h3>
+              <p>
+                Contact details, professionalism,
+                clarity and visible trust signals.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">08</div>
+            <div>
+              <h3>Enquiries & Conversion</h3>
+              <p>
+                Calls to action, contact journeys
+                and possible barriers to enquiries.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">09</div>
+            <div>
+              <h3>Priority Improvements</h3>
+              <p>
+                High, medium and low priority recommendations,
+                based on the issues identified.
+              </p>
+            </div>
+          </div>
+
+          <div class="check-report-row">
+            <div class="check-report-number">10</div>
+            <div>
+              <h3>Conclusion & Next Steps</h3>
+              <p>
+                A final summary and practical options
+                for moving forward.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="check-small">
+          Reviews are based on publicly accessible information
+          and reasonable external checks. Private analytics,
+          internal systems, security penetration testing and
+          guaranteed search rankings are not included.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+
+    <section class="check-section">
+      <div class="check-container">
+
+        <div class="check-eyebrow">
+          03 / The process
+        </div>
+
+        <h2>
+          Simple from<br>
+          start to finish.
+        </h2>
+
+        <div class="check-steps">
+
+          <div class="check-step">
+            <span>STEP 01</span>
+            <h3>Tell us about your business</h3>
+            <p>
+              Send your business name, website address
+              and contact details. We'll confirm whether
+              the standard review is suitable.
+            </p>
+          </div>
+
+          <div class="check-step">
+            <span>STEP 02</span>
+            <h3>We review your presence</h3>
+            <p>
+              Once your request and payment arrangements
+              are confirmed, we carry out the review
+              and prepare your personalised findings.
+            </p>
+          </div>
+
+          <div class="check-step">
+            <span>STEP 03</span>
+            <h3>Receive your report</h3>
+            <p>
+              Your 10-page PDF is delivered by email,
+              with observations and recommendations
+              you can use to plan your next steps.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="check-section">
+      <div class="check-container">
+
+        <div class="check-eyebrow">
+          04 / Frequently asked questions
+        </div>
+
+        <h2>
+          Good questions.<br>
+          Straight answers.
+        </h2>
+
+        <div class="check-faq">
+
+          <details>
+            <summary>Is the price really £49?</summary>
+            <p>
+              Yes. The standard Digital Health Check costs
+              £49 as a one-off service. Any additional work
+              would be discussed and quoted separately.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do I need to provide website login details?</summary>
+            <p>
+              No. The standard review focuses on publicly
+              accessible information, so website administrator
+              access is not required.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is the report personalised?</summary>
+            <p>
+              Yes. The report is prepared around your business
+              and its actual online presence. It is not a generic
+              automated checklist presented as an individual audit.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will you fix the problems you identify?</summary>
+            <p>
+              The £49 fee covers the review and report, not
+              implementation. If you'd like Sedigi to help
+              with improvements, we can discuss a separate
+              quotation. There is no obligation.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will this guarantee better Google rankings?</summary>
+            <p>
+              No. The review identifies observable opportunities
+              and potential issues. It does not guarantee search
+              positions, increased traffic or additional enquiries.
+            </p>
+          </details>
+
+          <details>
+            <summary>What if I don't have a website?</summary>
+            <p>
+              Contact us before ordering. We can discuss whether
+              a different type of digital presence review would
+              be more appropriate for your business.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+
+    <section class="check-section check-cta">
+      <div class="check-container">
+
+        <div class="check-eyebrow">
+          05 / Get started
+        </div>
+
+        <h2>
+          Find out what your<br>
+          website could do better.
+        </h2>
+
+        <p class="check-intro">
+          For £49, get a clearer understanding of your
+          business's online presence and the improvements
+          worth considering.
+        </p>
+
+        <div class="check-price-row" style="justify-content:center;">
+          <div class="check-price">£49</div>
+          <div class="check-price-note" style="text-align:left;">
+            One-off review<br>
+            10-page PDF report
+          </div>
+        </div>
+
+        <div class="check-actions">
+          <a
+            class="check-button"
+            href="mailto:hello@sedigi.co.uk?subject=Digital%20Health%20Check%20-%20%C2%A349%20Enquiry&amp;body=Hello%20Sedigi%2C%0A%0AI%20would%20like%20to%20request%20a%20Digital%20Health%20Check.%0A%0ABusiness%20name%3A%20%0AWebsite%20address%3A%20%0AContact%20name%3A%20%0A%0AThank%20you."
+          >
+            Request Your Digital Health Check ↗
+          </a>
+        </div>
+
+        <p class="check-small">
+          Enquiries are handled by email. Online checkout
+          is not yet enabled.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="check-footer">
+    <div class="check-container check-footer-inner">
+
+      <span>© 2026 Sedigi. All rights reserved.</span>
+
+      <a href="/privacy/">Privacy Policy</a>
+
+      <span>Reliable by Nature. Digital by Design.</span>
+
+    </div>
+  </footer>
+
+</body>
+</html>
