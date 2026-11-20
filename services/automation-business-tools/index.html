@@ -6,57 +6,318 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Automation & Business Tools | Sedigi</title>
-<meta name="description" content="Practical business automation, reporting dashboards, invoice tools, operations tracking and data management solutions from Sedigi.">
+<meta name="description" content="Practical business automation, reporting dashboards, invoice workflows, operations tracking and data management solutions from Sedigi.">
 <meta name="theme-color" content="#090909">
 <link rel="canonical" href="https://sedigi.co.uk/services/automation-business-tools/">
 <link rel="icon" href="/favicon.ico">
 <link rel="stylesheet" href="/assets/services.css">
 
 <style>
-.demo-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
-.demo-tab{padding:13px 17px;background:#191919;border:1px solid #444;color:#ddd;border-radius:7px;cursor:pointer;font:inherit}
-.demo-tab[aria-selected="true"]{background:#fff;color:#111;border-color:#fff}
-.demo-panel{display:none;background:#141414;border:1px solid #363636;border-radius:12px;padding:26px}
+.demo-tabs{
+ display:flex;
+ flex-wrap:wrap;
+ gap:10px;
+ margin:28px 0;
+}
+.demo-tab{
+ padding:13px 17px;
+ background:#191919;
+ border:1px solid #444;
+ color:#ddd;
+ border-radius:7px;
+ cursor:pointer;
+ font:inherit;
+}
+.demo-tab[aria-selected="true"]{
+ background:#fff;
+ color:#111;
+ border-color:#fff;
+}
+.demo-panel{
+ display:none;
+ background:#141414;
+ border:1px solid #363636;
+ border-radius:12px;
+ padding:26px;
+}
 .demo-panel.active{display:block}
 .demo-intro{color:#bbb;margin-bottom:25px}
-.demo-label{display:block;font-size:13px;color:#ccc;margin-bottom:7px}
-.demo-input,.demo-select{width:100%;box-sizing:border-box;padding:12px;background:#222;border:1px solid #555;border-radius:5px;color:#fff;font:inherit}
-.demo-input:focus,.demo-select:focus{outline:2px solid #fff;outline-offset:2px}
-.demo-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0}
-.demo-action{background:#fff;color:#111;border:0;border-radius:5px;padding:12px 17px;font:inherit;font-weight:700;cursor:pointer}
-.demo-secondary{background:#292929;color:#fff;border:1px solid #666}
-.demo-note{font-size:12px;color:#aaa;margin-top:20px}
-.demo-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.demo-kpi{padding:19px;background:#202020;border:1px solid #363636;border-radius:8px}
-.demo-kpi span{display:block;color:#aaa;font-size:12px}
-.demo-kpi strong{display:block;font-size:clamp(22px,3vw,31px);margin-top:9px}
-.demo-chart{height:190px;display:flex;align-items:flex-end;gap:13px;padding:20px 12px 32px;border-bottom:1px solid #555;margin:24px 0 10px}
-.demo-bar{flex:1;min-width:0;background:#ddd;position:relative;border-radius:4px 4px 0 0}
-.demo-bar span{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:8px;font-size:11px;color:#aaa}
-.demo-table-wrap{overflow-x:auto;margin-top:20px}
-.demo-table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}
-.demo-table th,.demo-table td{padding:13px 12px;border-bottom:1px solid #383838}
-.demo-table th{color:#aaa;font-weight:500}
-.demo-pill{display:inline-block;padding:5px 9px;border:1px solid #555;border-radius:20px;font-size:12px}
-.demo-invoice{margin-top:24px;background:#f4f4f4;color:#151515;padding:28px;border-radius:7px}
-.demo-invoice h3{font-size:28px;margin:0 0 12px}
+.demo-label{
+ display:block;
+ font-size:13px;
+ color:#ccc;
+ margin-bottom:7px;
+}
+.demo-input,.demo-select{
+ width:100%;
+ box-sizing:border-box;
+ padding:12px;
+ background:#222;
+ border:1px solid #555;
+ border-radius:5px;
+ color:#fff;
+ font:inherit;
+}
+.demo-input:focus,.demo-select:focus{
+ outline:2px solid #fff;
+ outline-offset:2px;
+}
+.demo-form-grid{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:16px;
+ margin:20px 0;
+}
+.demo-action{
+ background:#fff;
+ color:#111;
+ border:0;
+ border-radius:5px;
+ padding:12px 17px;
+ font:inherit;
+ font-weight:700;
+ cursor:pointer;
+}
+.demo-secondary{
+ background:#292929;
+ color:#fff;
+ border:1px solid #666;
+}
+.demo-note{
+ font-size:12px;
+ color:#aaa;
+ margin-top:20px;
+}
+.demo-kpis{
+ display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:12px;
+}
+.demo-kpi{
+ padding:19px;
+ background:#202020;
+ border:1px solid #363636;
+ border-radius:8px;
+}
+.demo-kpi span{
+ display:block;
+ color:#aaa;
+ font-size:12px;
+}
+.demo-kpi strong{
+ display:block;
+ font-size:clamp(22px,3vw,31px);
+ margin-top:9px;
+}
+.demo-chart{
+ height:190px;
+ display:flex;
+ align-items:flex-end;
+ gap:13px;
+ padding:20px 12px 32px;
+ border-bottom:1px solid #555;
+ margin:24px 0 10px;
+}
+.demo-bar{
+ flex:1;
+ min-width:0;
+ background:#ddd;
+ position:relative;
+ border-radius:4px 4px 0 0;
+}
+.demo-bar span{
+ position:absolute;
+ top:100%;
+ left:50%;
+ transform:translateX(-50%);
+ padding-top:8px;
+ font-size:11px;
+ color:#aaa;
+}
+.demo-table-wrap{
+ overflow-x:auto;
+ margin-top:20px;
+}
+.demo-table{
+ width:100%;
+ border-collapse:collapse;
+ text-align:left;
+ font-size:14px;
+}
+.demo-table th,.demo-table td{
+ padding:13px 12px;
+ border-bottom:1px solid #383838;
+}
+.demo-table th{
+ color:#aaa;
+ font-weight:500;
+}
+.demo-pill{
+ display:inline-block;
+ padding:5px 9px;
+ border:1px solid #555;
+ border-radius:20px;
+ font-size:12px;
+}
+.demo-invoice{
+ margin-top:24px;
+ background:#f4f4f4;
+ color:#151515;
+ padding:28px;
+ border-radius:7px;
+}
+.demo-invoice h3{
+ font-size:28px;
+ margin:0 0 12px;
+}
 .demo-invoice p{color:#333}
-.demo-invoice-row{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #ccc;padding:12px 0}
-.demo-invoice-total{font-size:25px;font-weight:800;text-align:right;margin-top:22px}
-.demo-task{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 0;border-bottom:1px solid #383838}
-.demo-task label{display:flex;align-items:center;gap:10px;cursor:pointer}
-.demo-task input{width:18px;height:18px;accent-color:#fff}
-.demo-task.done .demo-task-name{text-decoration:line-through;color:#999}
-.demo-progress{height:10px;background:#383838;border-radius:10px;overflow:hidden;margin:18px 0}
-.demo-progress-fill{height:100%;background:#fff;width:0%;transition:width .2s}
-.demo-small{font-size:13px;color:#aaa}
-.demo-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-@media(max-width:800px){.demo-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.demo-form-grid{grid-template-columns:1fr}.demo-panel{padding:17px}.demo-chart{gap:7px}.demo-invoice{padding:17px}.demo-task{align-items:flex-start;flex-direction:column}}
-@media print{
- body *{visibility:hidden!important}
- #invoiceOutput,#invoiceOutput *{visibility:visible!important}
- #invoiceOutput{position:absolute;left:0;top:0;width:100%;margin:0;background:white!important;color:black!important}
+.demo-invoice-row{
+ display:flex;
+ justify-content:space-between;
+ gap:20px;
+ border-bottom:1px solid #ccc;
+ padding:12px 0;
+}
+.demo-invoice-total{
+ font-size:25px;
+ font-weight:800;
+ text-align:right;
+ margin-top:22px;
+}
+.demo-task{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:15px;
+ padding:14px 0;
+ border-bottom:1px solid #383838;
+}
+.demo-task label{
+ display:flex;
+ align-items:center;
+ gap:10px;
+ cursor:pointer;
+}
+.demo-task input{
+ width:18px;
+ height:18px;
+ accent-color:#fff;
+}
+.demo-task.done .demo-task-name{
+ text-decoration:line-through;
+ color:#999;
+}
+.demo-progress{
+ height:10px;
+ background:#383838;
+ border-radius:10px;
+ overflow:hidden;
+ margin:18px 0;
+}
+.demo-progress-fill{
+ height:100%;
+ background:#fff;
+ width:0%;
+ transition:width .2s;
+}
+.demo-small{
+ font-size:13px;
+ color:#aaa;
+}
+.demo-actions{
+ display:flex;
+ gap:10px;
+ flex-wrap:wrap;
+ margin-top:18px;
+}
+.workflow-steps{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:12px;
+ margin:24px 0;
+}
+.workflow-step{
+ background:#202020;
+ border:1px solid #383838;
+ border-radius:8px;
+ padding:20px;
+}
+.workflow-step span{
+ display:block;
+ color:#aaa;
+ font-size:12px;
+ margin-bottom:10px;
+}
+.workflow-step strong{
+ display:block;
+ font-size:17px;
+ margin-bottom:9px;
+}
+.workflow-step p{
+ color:#bbb;
+ font-size:13px;
+ line-height:1.6;
+ margin:0;
+}
+.demo-preview-tag{
+ display:inline-block;
+ padding:7px 11px;
+ background:#292929;
+ border:1px solid #555;
+ border-radius:5px;
+ color:#ddd;
+ font-size:12px;
+ margin-top:10px;
+}
+.demo-highlight{
+ background:#202020;
+ border:1px solid #383838;
+ border-radius:9px;
+ padding:24px;
+ margin-top:24px;
+}
+.demo-highlight h4{
+ margin:0 0 10px;
+}
+.demo-highlight p{
+ color:#bbb;
+ margin:0;
+ line-height:1.7;
+}
+.demo-link{
+ display:inline-block;
+ margin-top:18px;
+ color:#fff;
+ font-weight:700;
+}
+@media(max-width:800px){
+ .demo-kpis{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+ }
+ .workflow-steps{
+  grid-template-columns:1fr;
+ }
+}
+@media(max-width:600px){
+ .demo-form-grid{
+  grid-template-columns:1fr;
+ }
+ .demo-panel{
+  padding:17px;
+ }
+ .demo-chart{
+  gap:7px;
+ }
+ .demo-invoice{
+  padding:17px;
+ }
+ .demo-task{
+  align-items:flex-start;
+  flex-direction:column;
+ }
+ .demo-invoice-row{
+  flex-wrap:wrap;
+ }
 }
 </style>
 </head>
@@ -66,7 +327,10 @@
 <header>
 <nav class="container" aria-label="Main navigation">
 <a href="/" aria-label="Sedigi homepage">
-<img class="logo-image" src="/SEDIGI_Logo_White_Transparent.png" alt="sedigi/">
+<img
+ class="logo-image"
+ src="/SEDIGI_Logo_White_Transparent.png"
+ alt="sedigi/">
 </a>
 <div class="nav-links">
 <a href="/#services">Services</a>
@@ -81,135 +345,655 @@
 
 <div class="container hero">
 <a class="back" href="/#services">← All services</a>
-<div class="eyebrow" style="margin-top:25px">Sedigi / Automation & Business Tools</div>
+
+<div class="eyebrow" style="margin-top:25px">
+Sedigi / Automation & Business Tools
+</div>
+
 <h1>Less manual work. More room to grow.</h1>
-<p class="lead">The right tools can make everyday business processes simpler, clearer and more efficient.</p>
-<p class="muted">From reporting dashboards and invoice workflows to task tracking and structured data, Sedigi helps businesses turn repetitive work into practical digital solutions.</p>
-<a class="button" href="/quote/">Discuss Your Project ↗</a>
+
+<p class="lead">
+Your business shouldn't need complicated or expensive software
+to work more efficiently.
+</p>
+
+<p class="muted">
+From reporting dashboards and invoice workflows to task tracking
+and structured data, Sedigi helps businesses replace repetitive
+administration with practical digital solutions.
+</p>
+
+<p class="muted">
+Whether you're a sole trader managing everything yourself or a
+growing business with multiple processes to coordinate, we focus
+on making your existing ways of working simpler, faster and
+more reliable.
+</p>
+
+<a class="button" href="/quote/">
+Discuss Your Project ↗
+</a>
 </div>
 
 <section>
 <div class="container">
+
 <div class="eyebrow">What we offer</div>
+
 <h2>Tools built around how you work.</h2>
-<p class="muted">Whether you're improving an existing spreadsheet or exploring a more tailored application, we focus on useful solutions rather than unnecessary complexity.</p>
+
+<p class="muted">
+Not every business needs another software subscription.
+Sometimes the biggest improvements come from making better
+use of the tools you already have.
+</p>
+
 <div class="grid">
-<article class="panel"><span class="kicker">01 / Reporting</span><h3>Performance Dashboards</h3><p>Bring important figures together in clear, accessible reports that help you understand performance.</p></article>
-<article class="panel"><span class="kicker">02 / Efficiency</span><h3>Workflow Automation</h3><p>Reduce repetitive administration with structured processes, calculations and automated actions where appropriate.</p></article>
-<article class="panel"><span class="kicker">03 / Finance</span><h3>Invoice & Document Tools</h3><p>Simplify the preparation of invoices, forms and recurring business documents.</p></article>
-<article class="panel"><span class="kicker">04 / Organisation</span><h3>Operations Tracking</h3><p>Monitor tasks, deadlines and operational progress in one organised place.</p></article>
-<article class="panel"><span class="kicker">05 / Information</span><h3>Data Management</h3><p>Structure, search and filter business information so it's easier to maintain and use.</p></article>
-<article class="panel"><span class="kicker">06 / Improvement</span><h3>Existing System Optimisation</h3><p>Improve spreadsheets, reporting processes and tools your team already uses.</p></article>
+
+<article class="panel">
+<span class="kicker">01 / Reporting</span>
+<h3>Performance Dashboards</h3>
+<p>
+Bring important business figures together in clear,
+accessible reports that help you understand performance,
+identify trends and make informed decisions.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">02 / Efficiency</span>
+<h3>Workflow Automation</h3>
+<p>
+Reduce repetitive administration through automated
+calculations, structured processes and connected
+workflows where appropriate.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">03 / Finance</span>
+<h3>Invoice & Document Automation</h3>
+<p>
+Simplify recurring invoice preparation, document
+generation and financial administration using
+tailored processes with appropriate checks.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">04 / Organisation</span>
+<h3>Operations Tracking</h3>
+<p>
+Monitor tasks, deadlines and operational progress
+in one organised place, helping everyone understand
+what needs attention.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">05 / Information</span>
+<h3>Data Management</h3>
+<p>
+Structure, search and filter business information
+so it becomes easier to maintain, review and use.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">06 / Improvement</span>
+<h3>Existing System Optimisation</h3>
+<p>
+Improve spreadsheets, reporting processes and
+existing tools before committing to the cost
+of replacing them.
+</p>
+</article>
+
 </div>
 </div>
 </section>
 
 <section id="interactive-demos">
 <div class="container">
-<div class="eyebrow">Interactive portfolio</div>
-<h2>Try the tools yourself.</h2>
-<p class="lead">Four working demonstrations showing how simple digital tools can improve everyday processes.</p>
-<p class="muted">These are illustrative browser-based demonstrations using fictional information. They are not connected to live customer systems.</p>
 
-<div class="demo-tabs" role="tablist" aria-label="Business tool demonstrations">
-<button type="button" class="demo-tab" role="tab" id="tab-dashboard" aria-controls="panel-dashboard" aria-selected="true" data-panel="dashboard">Performance Dashboard</button>
-<button type="button" class="demo-tab" role="tab" id="tab-invoice" aria-controls="panel-invoice" aria-selected="false" data-panel="invoice">Invoice Generator</button>
-<button type="button" class="demo-tab" role="tab" id="tab-operations" aria-controls="panel-operations" aria-selected="false" data-panel="operations">Operations Tracker</button>
-<button type="button" class="demo-tab" role="tab" id="tab-data" aria-controls="panel-data" aria-selected="false" data-panel="data">Data Management</button>
+<div class="eyebrow">Explore our capabilities</div>
+
+<h2>See what better systems could look like.</h2>
+
+<p class="lead">
+Explore four illustrative demonstrations of how practical
+digital solutions can support everyday business operations.
+</p>
+
+<p class="muted">
+Three demonstrations allow you to interact with fictional
+information. Our invoice automation example shows a
+read-only preview of a potential workflow.
+</p>
+
+<p class="muted">
+These examples demonstrate possible functionality.
+They are not connected to live customer systems,
+and no real customer information is used.
+</p>
+
+<div class="demo-tabs" role="tablist"
+ aria-label="Business tool demonstrations">
+
+<button
+ type="button"
+ class="demo-tab"
+ role="tab"
+ id="tab-dashboard"
+ aria-controls="panel-dashboard"
+ aria-selected="true"
+ tabindex="0"
+ data-panel="dashboard">
+Performance Dashboard
+</button>
+
+<button
+ type="button"
+ class="demo-tab"
+ role="tab"
+ id="tab-invoice"
+ aria-controls="panel-invoice"
+ aria-selected="false"
+ tabindex="-1"
+ data-panel="invoice">
+Invoice Automation
+</button>
+
+<button
+ type="button"
+ class="demo-tab"
+ role="tab"
+ id="tab-operations"
+ aria-controls="panel-operations"
+ aria-selected="false"
+ tabindex="-1"
+ data-panel="operations">
+Operations Tracker
+</button>
+
+<button
+ type="button"
+ class="demo-tab"
+ role="tab"
+ id="tab-data"
+ aria-controls="panel-data"
+ aria-selected="false"
+ tabindex="-1"
+ data-panel="data">
+Data Management
+</button>
+
 </div>
 
-<!-- DEMO 1 -->
-<div class="demo-panel active" id="panel-dashboard" role="tabpanel" aria-labelledby="tab-dashboard">
+<!-- DEMONSTRATION 1: DASHBOARD -->
+
+<div
+ class="demo-panel active"
+ id="panel-dashboard"
+ role="tabpanel"
+ aria-labelledby="tab-dashboard">
+
 <h3>Performance Dashboard</h3>
-<p class="demo-intro">Switch between fictional reporting periods to see how a dashboard can present useful business figures.</p>
-<label class="demo-label" for="dashboardPeriod">Reporting period</label>
-<select class="demo-select" id="dashboardPeriod" style="max-width:270px">
+
+<p class="demo-intro">
+Switch between fictional reporting periods to see how a
+dashboard can present important business information
+in a clear and accessible format.
+</p>
+
+<label class="demo-label" for="dashboardPeriod">
+Reporting period
+</label>
+
+<select
+ class="demo-select"
+ id="dashboardPeriod"
+ style="max-width:270px">
+
 <option value="oct">October 2026</option>
 <option value="sep">September 2026</option>
 <option value="aug">August 2026</option>
+
 </select>
+
 <div class="demo-kpis" style="margin-top:22px">
-<div class="demo-kpi"><span>Enquiries</span><strong id="kpiEnquiries">—</strong></div>
-<div class="demo-kpi"><span>Completed projects</span><strong id="kpiProjects">—</strong></div>
-<div class="demo-kpi"><span>Average response time</span><strong id="kpiResponse">—</strong></div>
-<div class="demo-kpi"><span>Customer satisfaction</span><strong id="kpiSatisfaction">—</strong></div>
-</div>
-<h4 style="margin-top:30px">Weekly enquiries</h4>
-<div class="demo-chart" id="dashboardChart" aria-label="Weekly enquiries bar chart"></div>
-<p class="demo-note">All figures are fictional and demonstrate a possible reporting layout.</p>
+
+<div class="demo-kpi">
+<span>Enquiries</span>
+<strong id="kpiEnquiries">—</strong>
 </div>
 
-<!-- DEMO 2 -->
-<div class="demo-panel" id="panel-invoice" role="tabpanel" aria-labelledby="tab-invoice">
-<h3>Invoice Generator</h3>
-<p class="demo-intro">Enter fictional details to generate a sample invoice instantly. Nothing is sent to a server or saved.</p>
-<form id="invoiceForm">
-<div class="demo-form-grid">
-<div><label class="demo-label" for="invoiceClient">Fictional customer</label><input class="demo-input" id="invoiceClient" value="Northstar Studio" maxlength="80" required></div>
-<div><label class="demo-label" for="invoiceService">Service description</label><input class="demo-input" id="invoiceService" value="Website content updates" maxlength="100" required></div>
-<div><label class="demo-label" for="invoiceQuantity">Quantity</label><input class="demo-input" id="invoiceQuantity" type="number" min="1" max="1000" value="2" required></div>
-<div><label class="demo-label" for="invoiceRate">Unit price (£)</label><input class="demo-input" id="invoiceRate" type="number" min="0" max="100000" step="0.01" value="75" required></div>
+<div class="demo-kpi">
+<span>Completed projects</span>
+<strong id="kpiProjects">—</strong>
 </div>
-<div class="demo-actions">
-<button type="submit" class="demo-action">Generate Sample Invoice</button>
-<button type="button" class="demo-action demo-secondary" id="printInvoice">Print Sample</button>
+
+<div class="demo-kpi">
+<span>Average response time</span>
+<strong id="kpiResponse">—</strong>
 </div>
-</form>
-<div class="demo-invoice" id="invoiceOutput" aria-live="polite">
+
+<div class="demo-kpi">
+<span>Customer satisfaction</span>
+<strong id="kpiSatisfaction">—</strong>
+</div>
+
+</div>
+
+<h4 style="margin-top:30px">
+Weekly enquiries
+</h4>
+
+<div
+ class="demo-chart"
+ id="dashboardChart"
+ role="img"
+ aria-label="Weekly enquiries bar chart">
+</div>
+
+<div class="demo-highlight">
+<h4>How this could help your business</h4>
+<p>
+Instead of manually reviewing several spreadsheets,
+a tailored dashboard could bring your key figures
+together and make changes in performance easier
+to identify.
+</p>
+</div>
+
+<p class="demo-note">
+All figures are fictional. This demonstration is
+not connected to a live reporting system.
+</p>
+
+</div>
+
+<!-- DEMONSTRATION 2: INVOICE AUTOMATION -->
+
+<div
+ class="demo-panel"
+ id="panel-invoice"
+ role="tabpanel"
+ aria-labelledby="tab-invoice"
+ hidden>
+
+<h3>Invoice Automation</h3>
+
+<p class="demo-intro">
+Imagine preparing recurring invoices without repeatedly
+copying information between spreadsheets, documents
+and customer records.
+</p>
+
+<p class="demo-intro">
+A tailored invoice workflow could help organise the
+information, apply agreed calculations and prepare
+documents for review before they are issued.
+</p>
+
+<div class="workflow-steps">
+
+<div class="workflow-step">
+<span>01 / Input</span>
+<strong>Business records</strong>
+<p>
+An authorised source supplies the relevant
+customer, service and billing information.
+</p>
+</div>
+
+<div class="workflow-step">
+<span>02 / Process</span>
+<strong>Apply the rules</strong>
+<p>
+The system applies agreed calculations,
+checks required information and identifies
+records needing attention.
+</p>
+</div>
+
+<div class="workflow-step">
+<span>03 / Review</span>
+<strong>Prepare the output</strong>
+<p>
+A draft document is prepared for an
+authorised person to review before
+approval or issue.
+</p>
+</div>
+
+</div>
+
+<span class="demo-preview-tag">
+Read-only fictional example
+</span>
+
+<div class="demo-invoice">
+
 <h3>SAMPLE INVOICE</h3>
-<p><strong>DEMONSTRATION ONLY — NOT FOR PAYMENT</strong></p>
-<div class="demo-invoice-row"><span>Invoice reference</span><strong>DEMO-001</strong></div>
-<div class="demo-invoice-row"><span>From</span><strong>Example Studio (fictional)</strong></div>
-<div class="demo-invoice-row"><span>To</span><strong id="invoiceDisplayClient">Northstar Studio</strong></div>
-<div class="demo-invoice-row"><span>Description</span><strong id="invoiceDisplayService">Website content updates</strong></div>
-<div class="demo-invoice-row"><span>Quantity × rate</span><strong id="invoiceDisplayCalculation">2 × £75.00</strong></div>
-<div class="demo-invoice-total" id="invoiceDisplayTotal">£150.00</div>
-<p style="font-size:12px;margin-top:20px">Illustrative calculation only. This is not a VAT invoice or an issued financial document.</p>
-</div>
+
+<p>
+<strong>
+ILLUSTRATIVE PREVIEW — NOT FOR PAYMENT
+</strong>
+</p>
+
+<div class="demo-invoice-row">
+<span>Invoice reference</span>
+<strong>DEMO-001</strong>
 </div>
 
-<!-- DEMO 3 -->
-<div class="demo-panel" id="panel-operations" role="tabpanel" aria-labelledby="tab-operations">
+<div class="demo-invoice-row">
+<span>From</span>
+<strong>Example Studio (fictional)</strong>
+</div>
+
+<div class="demo-invoice-row">
+<span>To</span>
+<strong>Northstar Studio (fictional)</strong>
+</div>
+
+<div class="demo-invoice-row">
+<span>Description</span>
+<strong>Website content updates</strong>
+</div>
+
+<div class="demo-invoice-row">
+<span>Quantity</span>
+<strong>2</strong>
+</div>
+
+<div class="demo-invoice-row">
+<span>Unit price</span>
+<strong>£75.00</strong>
+</div>
+
+<div class="demo-invoice-row">
+<span>Subtotal</span>
+<strong>£150.00</strong>
+</div>
+
+<div class="demo-invoice-row">
+<span>VAT</span>
+<strong>Not calculated in this example</strong>
+</div>
+
+<div class="demo-invoice-total">
+£150.00
+</div>
+
+<p style="font-size:12px;margin-top:20px">
+Fictional illustration only. This is not an issued
+invoice, VAT invoice or financial document.
+The example does not demonstrate tax compliance
+or a live automated billing system.
+</p>
+
+</div>
+
+<div class="demo-highlight">
+
+<h4>What could be automated?</h4>
+
+<p>
+Depending on your requirements, a bespoke solution
+could help with importing billing information,
+calculating charges, preparing draft documents,
+tracking invoice status and identifying missing
+information.
+</p>
+
+<p style="margin-top:12px">
+Financial accuracy, tax treatment, approvals
+and access permissions would need to be considered
+as part of the project.
+</p>
+
+<a class="demo-link" href="/quote/">
+Discuss Invoice Automation ↗
+</a>
+
+</div>
+
+<p class="demo-note">
+This is a static demonstration of a possible workflow.
+No invoice-generation or printing functionality is
+provided on this page.
+</p>
+
+</div>
+
+<!-- DEMONSTRATION 3: OPERATIONS TRACKER -->
+
+<div
+ class="demo-panel"
+ id="panel-operations"
+ role="tabpanel"
+ aria-labelledby="tab-operations"
+ hidden>
+
 <h3>Operations Tracker</h3>
-<p class="demo-intro">Mark fictional tasks as completed and watch the progress indicator update.</p>
-<strong id="taskSummary">0 of 5 tasks complete</strong>
-<div class="demo-progress"><div class="demo-progress-fill" id="taskProgress"></div></div>
-<div id="taskList">
-<div class="demo-task"><label><input type="checkbox" class="task-check"><span class="demo-task-name">Review weekly performance report</span></label><span class="demo-pill">Reporting</span></div>
-<div class="demo-task"><label><input type="checkbox" class="task-check"><span class="demo-task-name">Confirm supplier documentation</span></label><span class="demo-pill">Compliance</span></div>
-<div class="demo-task"><label><input type="checkbox" class="task-check"><span class="demo-task-name">Update customer enquiry tracker</span></label><span class="demo-pill">Administration</span></div>
-<div class="demo-task"><label><input type="checkbox" class="task-check"><span class="demo-task-name">Prepare monthly invoice summary</span></label><span class="demo-pill">Finance</span></div>
-<div class="demo-task"><label><input type="checkbox" class="task-check"><span class="demo-task-name">Review outstanding project actions</span></label><span class="demo-pill">Projects</span></div>
+
+<p class="demo-intro">
+Mark fictional tasks as completed and watch the
+progress indicator update.
+</p>
+
+<strong id="taskSummary" aria-live="polite">
+0 of 5 tasks complete
+</strong>
+
+<div class="demo-progress">
+<div
+ class="demo-progress-fill"
+ id="taskProgress">
 </div>
-<div class="demo-actions"><button class="demo-action demo-secondary" id="resetTasks" type="button">Reset Demonstration</button></div>
-<p class="demo-note">Changes remain in this browser session only and reset when the page reloads.</p>
 </div>
 
-<!-- DEMO 4 -->
-<div class="demo-panel" id="panel-data" role="tabpanel" aria-labelledby="tab-data">
+<div id="taskList">
+
+<div class="demo-task">
+<label>
+<input type="checkbox" class="task-check">
+<span class="demo-task-name">
+Review weekly performance report
+</span>
+</label>
+<span class="demo-pill">Reporting</span>
+</div>
+
+<div class="demo-task">
+<label>
+<input type="checkbox" class="task-check">
+<span class="demo-task-name">
+Confirm supplier documentation
+</span>
+</label>
+<span class="demo-pill">Compliance</span>
+</div>
+
+<div class="demo-task">
+<label>
+<input type="checkbox" class="task-check">
+<span class="demo-task-name">
+Update customer enquiry tracker
+</span>
+</label>
+<span class="demo-pill">Administration</span>
+</div>
+
+<div class="demo-task">
+<label>
+<input type="checkbox" class="task-check">
+<span class="demo-task-name">
+Prepare monthly invoice summary
+</span>
+</label>
+<span class="demo-pill">Finance</span>
+</div>
+
+<div class="demo-task">
+<label>
+<input type="checkbox" class="task-check">
+<span class="demo-task-name">
+Review outstanding project actions
+</span>
+</label>
+<span class="demo-pill">Projects</span>
+</div>
+
+</div>
+
+<div class="demo-actions">
+
+<button
+ class="demo-action demo-secondary"
+ id="resetTasks"
+ type="button">
+Reset Demonstration
+</button>
+
+</div>
+
+<div class="demo-highlight">
+
+<h4>Beyond a simple checklist</h4>
+
+<p>
+A tailored operations tracker could include
+assigned responsibilities, deadlines,
+automatic reminders, approval stages
+and management reporting.
+</p>
+
+<a class="demo-link" href="/quote/">
+Discuss Operations Tracking ↗
+</a>
+
+</div>
+
+<p class="demo-note">
+Changes remain in this browser session only
+and reset when the page reloads.
+</p>
+
+</div>
+
+<!-- DEMONSTRATION 4: DATA MANAGEMENT -->
+
+<div
+ class="demo-panel"
+ id="panel-data"
+ role="tabpanel"
+ aria-labelledby="tab-data"
+ hidden>
+
 <h3>Data Management Tool</h3>
-<p class="demo-intro">Search and filter a small fictional business database.</p>
+
+<p class="demo-intro">
+Search and filter a small fictional business database
+to see how structured information can make everyday
+administration easier.
+</p>
+
 <div class="demo-form-grid">
-<div><label class="demo-label" for="recordSearch">Search records</label><input class="demo-input" id="recordSearch" placeholder="Search name, service or region"></div>
-<div><label class="demo-label" for="recordStatus">Filter by status</label>
+
+<div>
+<label class="demo-label" for="recordSearch">
+Search records
+</label>
+
+<input
+ class="demo-input"
+ id="recordSearch"
+ placeholder="Search name, service or region">
+</div>
+
+<div>
+<label class="demo-label" for="recordStatus">
+Filter by status
+</label>
+
 <select class="demo-select" id="recordStatus">
 <option value="all">All statuses</option>
 <option value="Active">Active</option>
 <option value="Pending">Pending</option>
 <option value="Archived">Archived</option>
-</select></div>
+</select>
+
 </div>
-<p class="demo-small" id="recordCount" aria-live="polite"></p>
+</div>
+
+<p
+ class="demo-small"
+ id="recordCount"
+ aria-live="polite">
+</p>
+
 <div class="demo-table-wrap">
+
 <table class="demo-table">
-<thead><tr><th>Organisation</th><th>Service</th><th>Region</th><th>Status</th></tr></thead>
+
+<thead>
+<tr>
+<th>Organisation</th>
+<th>Service</th>
+<th>Region</th>
+<th>Status</th>
+</tr>
+</thead>
+
 <tbody id="recordsBody"></tbody>
+
 </table>
+
 </div>
+
 <div class="demo-actions">
-<button class="demo-action demo-secondary" type="button" id="resetRecords">Clear Filters</button>
+
+<button
+ class="demo-action demo-secondary"
+ type="button"
+ id="resetRecords">
+Clear Filters
+</button>
+
 </div>
-<p class="demo-note">All organisation names and records are fictional. No real customer information is used.</p>
+
+<div class="demo-highlight">
+
+<h4>Turn scattered records into useful information</h4>
+
+<p>
+A tailored data management solution could bring
+together records from existing spreadsheets,
+introduce consistent categories, reduce duplicate
+entries and make important information easier
+to find.
+</p>
+
+<p style="margin-top:12px">
+For real business information, access controls,
+data protection and appropriate handling
+procedures would form part of the requirements.
+</p>
+
+<a class="demo-link" href="/quote/">
+Discuss Data Management ↗
+</a>
+
+</div>
+
+<p class="demo-note">
+All organisation names and records are fictional.
+No real customer information is used.
+</p>
+
 </div>
 
 </div>
@@ -217,37 +1001,243 @@
 
 <section>
 <div class="container">
-<div class="eyebrow">Our approach</div>
-<h2>Start with the problem, not the software.</h2>
-<p class="lead">Good business tools should make work easier, not create another complicated system to manage.</p>
+
+<div class="eyebrow">Why Sedigi?</div>
+
+<h2>Practical improvements. Without unnecessary complexity.</h2>
+
+<p class="lead">
+You don't always need a completely new system
+to make a meaningful improvement.
+</p>
+
 <div class="grid">
-<article class="panel"><span class="kicker">01 / Understand</span><h3>Review the workflow</h3><p>Identify the repetitive tasks, information gaps and practical problems worth solving.</p></article>
-<article class="panel"><span class="kicker">02 / Design</span><h3>Plan the solution</h3><p>Choose a suitable approach based on the tools you already use, your requirements and your budget.</p></article>
-<article class="panel"><span class="kicker">03 / Build</span><h3>Develop & test</h3><p>Create the solution, check calculations and functionality, and refine it against the agreed requirements.</p></article>
-<article class="panel"><span class="kicker">04 / Support</span><h3>Explain & improve</h3><p>Provide guidance on using the finished tool and discuss future improvements where needed.</p></article>
+
+<article class="panel">
+<span class="kicker">01 / Existing tools</span>
+<h3>Make better use of what you have</h3>
+<p>
+We explore whether your existing spreadsheets,
+platforms and processes can be improved before
+recommending something new.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">02 / Clear pricing</span>
+<h3>Understand the project cost</h3>
+<p>
+We discuss the requirements and provide a
+quotation based on the agreed scope, including
+any known third-party costs.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">03 / Everyday usefulness</span>
+<h3>Built for real business problems</h3>
+<p>
+Our focus is on practical results, such as
+less repetitive administration, clearer
+information and more consistent processes.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">04 / Suitable solutions</span>
+<h3>Technology that fits your business</h3>
+<p>
+From a refined spreadsheet to a bespoke
+browser-based application, we assess what
+makes sense for your requirements and budget.
+</p>
+</article>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="eyebrow">Our approach</div>
+
+<h2>Start with the problem, not the software.</h2>
+
+<p class="lead">
+Good business tools should make work easier,
+not create another complicated system to manage.
+</p>
+
+<div class="grid">
+
+<article class="panel">
+<span class="kicker">01 / Understand</span>
+<h3>Review the workflow</h3>
+<p>
+Identify repetitive tasks, information gaps
+and practical problems worth solving.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">02 / Design</span>
+<h3>Plan the solution</h3>
+<p>
+Choose an approach based on your existing
+tools, requirements and budget.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">03 / Build</span>
+<h3>Develop & test</h3>
+<p>
+Create the solution, check calculations
+and functionality, and refine it against
+the agreed requirements.
+</p>
+</article>
+
+<article class="panel">
+<span class="kicker">04 / Support</span>
+<h3>Explain & improve</h3>
+<p>
+Provide guidance on using the finished
+tool and discuss future improvements
+where needed.
+</p>
+</article>
+
 </div>
 </div>
 </section>
 
 <section>
 <div class="container faq">
+
 <div class="eyebrow">Frequently asked questions</div>
+
 <h2>Good to know.</h2>
-<details><summary>Can you improve a spreadsheet we already use?</summary><p>Yes. We can review existing spreadsheets and explore improvements to calculations, layouts, reporting and repetitive processes.</p></details>
-<details><summary>Do we need to purchase new software?</summary><p>Not necessarily. Depending on your requirements, a practical solution may be possible using existing tools. Any additional software costs would be discussed before work begins.</p></details>
-<details><summary>Can you create a bespoke dashboard?</summary><p>Yes. We can discuss the information you need to monitor and the most suitable way to present it.</p></details>
-<details><summary>Can business processes be automated completely?</summary><p>Some processes can be automated extensively, while others need human review. We assess the risks, limitations and appropriate level of automation for each workflow.</p></details>
-<details><summary>Are the demonstrations connected to real businesses?</summary><p>No. All four examples use fictional data and demonstrate possible functionality rather than existing customer deployments.</p></details>
-<details><summary>How much does a custom tool cost?</summary><p>Pricing depends on the complexity, integrations, functionality and support required. We provide a tailored quotation following an initial discussion.</p></details>
+
+<details>
+<summary>Can you improve a spreadsheet we already use?</summary>
+<p>
+Yes. We can review existing spreadsheets and explore
+improvements to calculations, layouts, reporting,
+data organisation and repetitive processes.
+</p>
+</details>
+
+<details>
+<summary>Do we need to purchase new software?</summary>
+<p>
+Not necessarily. Depending on your requirements,
+a practical solution may be possible using tools
+you already have. Any additional software,
+subscription or hosting costs would be discussed
+before work begins.
+</p>
+</details>
+
+<details>
+<summary>Can you create a bespoke dashboard?</summary>
+<p>
+Yes. We can discuss the information you need to
+monitor, where that information currently lives
+and the most suitable way to present it.
+</p>
+</details>
+
+<details>
+<summary>Can you automate our invoice preparation?</summary>
+<p>
+We can explore ways to reduce manual invoice
+preparation, including importing records,
+applying agreed calculations and preparing
+draft documents for review. The final approach
+depends on your existing systems, requirements
+and necessary financial controls.
+</p>
+</details>
+
+<details>
+<summary>Can business processes be automated completely?</summary>
+<p>
+Some processes can be automated extensively,
+while others need human review. We assess the
+risks, limitations and appropriate level of
+automation for each workflow.
+</p>
+</details>
+
+<details>
+<summary>Can the tools work with our existing systems?</summary>
+<p>
+Potentially. This depends on the systems involved,
+their available integration options and your
+access permissions. We would review compatibility
+before agreeing the project scope.
+</p>
+</details>
+
+<details>
+<summary>Will our business data be secure?</summary>
+<p>
+Data protection and security requirements are
+considered during project planning. Appropriate
+access controls, data handling arrangements and
+technical safeguards depend on the type of
+information and solution involved.
+</p>
+</details>
+
+<details>
+<summary>Are the demonstrations connected to real businesses?</summary>
+<p>
+No. All four examples use fictional information.
+Three are limited interactive browser demonstrations,
+while the invoice example is a read-only illustration.
+They do not represent existing customer deployments.
+</p>
+</details>
+
+<details>
+<summary>How much does a custom tool cost?</summary>
+<p>
+Pricing depends on the complexity, integrations,
+functionality, testing and support required.
+We provide a tailored quotation following an
+initial discussion of your requirements.
+</p>
+</details>
+
 </div>
 </section>
 
 <section class="cta">
 <div class="container">
+
 <div class="eyebrow">Work smarter</div>
+
 <h2>What could your business do with less administration?</h2>
-<p class="lead">Tell us which processes take up your time. We'll explore how reporting, automation or a tailored digital tool could help.</p>
-<a class="button" href="/quote/">Request a Quote ↗</a>
+
+<p class="lead">
+The right digital solution could save time,
+improve consistency and help you focus on
+running your business.
+</p>
+
+<p class="muted">
+Tell us which processes take up your time.
+We'll explore how reporting, automation or
+a tailored digital tool could help.
+</p>
+
+<a class="button" href="/quote/">
+Request a Quote ↗
+</a>
+
 </div>
 </section>
 
@@ -255,9 +1245,17 @@
 
 <footer>
 <div class="container footer-inner">
+
 <span>© 2026 Sedigi. All rights reserved.</span>
-<a href="/privacy/">Privacy Policy</a>
-<span>Reliable by Nature. Digital by Design.</span>
+
+<a href="/privacy/">
+Privacy Policy
+</a>
+
+<span>
+Reliable by Nature. Digital by Design.
+</span>
+
 </div>
 </footer>
 
@@ -265,89 +1263,217 @@
 (function(){
 "use strict";
 
-const tabs=[...document.querySelectorAll(".demo-tab")];
-const panels=[...document.querySelectorAll(".demo-panel")];
+/* DEMONSTRATION TABS */
+
+const tabs=[
+ ...document.querySelectorAll(".demo-tab")
+];
+
+const panels=[
+ ...document.querySelectorAll(".demo-panel")
+];
 
 function activateTab(tab){
- tabs.forEach(t=>t.setAttribute("aria-selected",String(t===tab)));
- panels.forEach(p=>p.classList.toggle("active",p.id==="panel-"+tab.dataset.panel));
+ tabs.forEach(t=>{
+  const selected=t===tab;
+  t.setAttribute(
+   "aria-selected",
+   String(selected)
+  );
+  t.tabIndex=selected?0:-1;
+ });
+
+ panels.forEach(panel=>{
+  const active=
+   panel.id==="panel-"+tab.dataset.panel;
+
+  panel.classList.toggle("active",active);
+  panel.hidden=!active;
+ });
 }
+
 tabs.forEach((tab,index)=>{
- tab.addEventListener("click",()=>activateTab(tab));
+ tab.addEventListener("click",()=>{
+  activateTab(tab);
+ });
+
  tab.addEventListener("keydown",event=>{
-  if(!["ArrowRight","ArrowLeft","Home","End"].includes(event.key))return;
+  if(![
+   "ArrowRight",
+   "ArrowLeft",
+   "Home",
+   "End"
+  ].includes(event.key))return;
+
   event.preventDefault();
+
   let next=index;
-  if(event.key==="ArrowRight")next=(index+1)%tabs.length;
-  if(event.key==="ArrowLeft")next=(index-1+tabs.length)%tabs.length;
-  if(event.key==="Home")next=0;
-  if(event.key==="End")next=tabs.length-1;
+
+  if(event.key==="ArrowRight"){
+   next=(index+1)%tabs.length;
+  }
+
+  if(event.key==="ArrowLeft"){
+   next=(index-1+tabs.length)%tabs.length;
+  }
+
+  if(event.key==="Home"){
+   next=0;
+  }
+
+  if(event.key==="End"){
+   next=tabs.length-1;
+  }
+
   tabs[next].focus();
   activateTab(tabs[next]);
  });
 });
 
+/* PERFORMANCE DASHBOARD */
+
 const reporting={
- oct:{enquiries:84,projects:19,response:"2.4 hrs",satisfaction:"96%",weeks:[14,19,23,28]},
- sep:{enquiries:69,projects:16,response:"3.1 hrs",satisfaction:"94%",weeks:[13,15,18,23]},
- aug:{enquiries:58,projects:13,response:"3.8 hrs",satisfaction:"92%",weeks:[10,12,17,19]}
+ oct:{
+  enquiries:84,
+  projects:19,
+  response:"2.4 hrs",
+  satisfaction:"96%",
+  weeks:[14,19,23,28]
+ },
+ sep:{
+  enquiries:69,
+  projects:16,
+  response:"3.1 hrs",
+  satisfaction:"94%",
+  weeks:[13,15,18,23]
+ },
+ aug:{
+  enquiries:58,
+  projects:13,
+  response:"3.8 hrs",
+  satisfaction:"92%",
+  weeks:[10,12,17,19]
+ }
 };
+
 function updateDashboard(){
- const data=reporting[document.getElementById("dashboardPeriod").value];
- document.getElementById("kpiEnquiries").textContent=data.enquiries;
- document.getElementById("kpiProjects").textContent=data.projects;
- document.getElementById("kpiResponse").textContent=data.response;
- document.getElementById("kpiSatisfaction").textContent=data.satisfaction;
- const chart=document.getElementById("dashboardChart");
+ const period=document.getElementById(
+  "dashboardPeriod"
+ ).value;
+
+ const data=reporting[period];
+
+ document.getElementById(
+  "kpiEnquiries"
+ ).textContent=data.enquiries;
+
+ document.getElementById(
+  "kpiProjects"
+ ).textContent=data.projects;
+
+ document.getElementById(
+  "kpiResponse"
+ ).textContent=data.response;
+
+ document.getElementById(
+  "kpiSatisfaction"
+ ).textContent=data.satisfaction;
+
+ const chart=document.getElementById(
+  "dashboardChart"
+ );
+
  chart.replaceChildren();
+
  data.weeks.forEach((value,index)=>{
   const bar=document.createElement("div");
   bar.className="demo-bar";
-  bar.style.height=(value/30*100)+"%";
-  bar.title="Week "+(index+1)+": "+value+" enquiries";
+
+  bar.style.height=
+   (value/30*100)+"%";
+
+  bar.title=
+   "Week "+(index+1)+": "+
+   value+" enquiries";
+
   const label=document.createElement("span");
+
   label.textContent="W"+(index+1);
+
   bar.append(label);
   chart.append(bar);
  });
- chart.setAttribute("aria-label","Weekly enquiries: "+data.weeks.map((v,i)=>"week "+(i+1)+", "+v).join("; "));
+
+ chart.setAttribute(
+  "aria-label",
+  "Weekly enquiries: "+
+  data.weeks.map((value,index)=>
+   "week "+(index+1)+", "+value
+  ).join("; ")
+ );
 }
-document.getElementById("dashboardPeriod").addEventListener("change",updateDashboard);
+
+document.getElementById(
+ "dashboardPeriod"
+).addEventListener(
+ "change",
+ updateDashboard
+);
+
 updateDashboard();
 
-const currency=new Intl.NumberFormat("en-GB",{style:"currency",currency:"GBP"});
-function updateInvoice(event){
- if(event)event.preventDefault();
- const client=document.getElementById("invoiceClient").value.trim();
- const service=document.getElementById("invoiceService").value.trim();
- const quantity=Number(document.getElementById("invoiceQuantity").value);
- const rate=Number(document.getElementById("invoiceRate").value);
- if(!client||!service||!Number.isInteger(quantity)||quantity<1||quantity>1000||!Number.isFinite(rate)||rate<0||rate>100000)return;
- document.getElementById("invoiceDisplayClient").textContent=client;
- document.getElementById("invoiceDisplayService").textContent=service;
- document.getElementById("invoiceDisplayCalculation").textContent=quantity+" × "+currency.format(rate);
- document.getElementById("invoiceDisplayTotal").textContent=currency.format(Math.round(quantity*rate*100)/100);
-}
-document.getElementById("invoiceForm").addEventListener("submit",updateInvoice);
-document.getElementById("printInvoice").addEventListener("click",()=>{
- updateInvoice();
- if(document.getElementById("invoiceForm").reportValidity())window.print();
-});
-updateInvoice();
+/* OPERATIONS TRACKER */
 
-const checks=[...document.querySelectorAll(".task-check")];
+const checks=[
+ ...document.querySelectorAll(".task-check")
+];
+
 function updateTasks(){
- const done=checks.filter(c=>c.checked).length;
- document.getElementById("taskSummary").textContent=done+" of "+checks.length+" tasks complete";
- document.getElementById("taskProgress").style.width=(done/checks.length*100)+"%";
- checks.forEach(c=>c.closest(".demo-task").classList.toggle("done",c.checked));
+ const done=checks.filter(
+  check=>check.checked
+ ).length;
+
+ document.getElementById(
+  "taskSummary"
+ ).textContent=
+  done+" of "+checks.length+
+  " tasks complete";
+
+ document.getElementById(
+  "taskProgress"
+ ).style.width=
+  (done/checks.length*100)+"%";
+
+ checks.forEach(check=>{
+  check.closest(
+   ".demo-task"
+  ).classList.toggle(
+   "done",
+   check.checked
+  );
+ });
 }
-checks.forEach(c=>c.addEventListener("change",updateTasks));
-document.getElementById("resetTasks").addEventListener("click",()=>{
- checks.forEach(c=>c.checked=false);
+
+checks.forEach(check=>{
+ check.addEventListener(
+  "change",
+  updateTasks
+ );
+});
+
+document.getElementById(
+ "resetTasks"
+).addEventListener("click",()=>{
+ checks.forEach(check=>{
+  check.checked=false;
+ });
+
  updateTasks();
 });
+
 updateTasks();
+
+/* FICTIONAL DATA MANAGEMENT */
 
 const records=[
  ["Northstar Studio","Design","North East","Active"],
@@ -359,47 +1485,102 @@ const records=[
  ["Cedar Works","Construction","Yorkshire","Active"],
  ["Atlas Projects","Project support","South East","Archived"]
 ];
+
 function renderRecords(){
- const query=document.getElementById("recordSearch").value.toLowerCase().trim();
- const status=document.getElementById("recordStatus").value;
- const filtered=records.filter(r=>
-  (status==="all"||r[3]===status)&&
-  r.some(value=>value.toLowerCase().includes(query))
+ const query=document.getElementById(
+  "recordSearch"
+ ).value.toLowerCase().trim();
+
+ const status=document.getElementById(
+  "recordStatus"
+ ).value;
+
+ const filtered=records.filter(record=>
+  (status==="all"||record[3]===status)&&
+  record.some(value=>
+   value.toLowerCase().includes(query)
+  )
  );
- const body=document.getElementById("recordsBody");
+
+ const body=document.getElementById(
+  "recordsBody"
+ );
+
  body.replaceChildren();
+
  filtered.forEach(record=>{
   const row=document.createElement("tr");
+
   record.forEach((value,index)=>{
    const cell=document.createElement("td");
+
    if(index===3){
     const pill=document.createElement("span");
+
     pill.className="demo-pill";
     pill.textContent=value;
+
     cell.append(pill);
-   }else cell.textContent=value;
+   }else{
+    cell.textContent=value;
+   }
+
    row.append(cell);
   });
+
   body.append(row);
  });
+
  if(!filtered.length){
   const row=document.createElement("tr");
   const cell=document.createElement("td");
+
   cell.colSpan=4;
   cell.textContent="No matching records.";
+
   row.append(cell);
   body.append(row);
  }
- document.getElementById("recordCount").textContent=filtered.length+" of "+records.length+" fictional records shown";
+
+ document.getElementById(
+  "recordCount"
+ ).textContent=
+  filtered.length+
+  " of "+
+  records.length+
+  " fictional records shown";
 }
-document.getElementById("recordSearch").addEventListener("input",renderRecords);
-document.getElementById("recordStatus").addEventListener("change",renderRecords);
-document.getElementById("resetRecords").addEventListener("click",()=>{
- document.getElementById("recordSearch").value="";
- document.getElementById("recordStatus").value="all";
+
+document.getElementById(
+ "recordSearch"
+).addEventListener(
+ "input",
+ renderRecords
+);
+
+document.getElementById(
+ "recordStatus"
+).addEventListener(
+ "change",
+ renderRecords
+);
+
+document.getElementById(
+ "resetRecords"
+).addEventListener("click",()=>{
+ document.getElementById(
+  "recordSearch"
+ ).value="";
+
+ document.getElementById(
+  "recordStatus"
+ ).value="all";
+
  renderRecords();
 });
+
 renderRecords();
+
 })();
 </script>
 
