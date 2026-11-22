@@ -11,7 +11,6 @@
   <link rel="canonical" href="https://sedigi.co.uk/">
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5">
 
-  <!-- Existing space-dust styling -->
   <link rel="stylesheet" href="/assets/services.css?v=space-dust-1">
 
   <!-- Social sharing -->
@@ -64,16 +63,17 @@
 
   <style>
     :root {
-      --black: #090909;
-      --charcoal: #171717;
-      --white: #f5f4f1;
-      --paper: #f0efeb;
-      --card: #ffffff;
-      --ink: #171717;
-      --muted-dark: #505050;
-      --muted-light: #d0d0d0;
-      --line-dark: #303030;
-      --line-light: #deddd9;
+      --bg: #090a0d;
+      --surface: #121419;
+      --surface-raised: #1b1e25;
+      --silver: #c9cdd4;
+      --silver-light: #e0e2e6;
+      --silver-dark: #aeb4be;
+      --ink: #171a20;
+      --ink-soft: #30343c;
+      --white: #f7f8fa;
+      --muted: #d0d3da;
+      --line: #343840;
     }
 
     *,
@@ -83,6 +83,7 @@
     }
 
     html {
+      scroll-behaviour: smooth;
       scroll-behavior: smooth;
       scroll-padding-top: 90px;
     }
@@ -90,8 +91,8 @@
     body {
       margin: 0;
       min-width: 0;
-      background: var(--black);
-      color: #fff;
+      background: var(--bg);
+      color: var(--white);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
       overflow-wrap: break-word;
@@ -115,13 +116,13 @@
       margin-inline: auto;
     }
 
-    /* HEADER */
+    /* NAVIGATION */
 
     .site-header {
       position: relative;
       z-index: 20;
-      background: var(--black);
-      border-bottom: 1px solid var(--line-dark);
+      background: #090a0d;
+      border-bottom: 1px solid var(--line);
     }
 
     .site-nav {
@@ -154,7 +155,7 @@
     }
 
     .nav-links a {
-      color: #d0d0d0;
+      color: #d4d7dd;
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
@@ -167,23 +168,22 @@
     }
 
     .nav-links .nav-quote {
-      background: #fff;
-      color: var(--black);
+      background: var(--silver-light);
+      color: var(--ink);
       padding: 11px 17px;
-      border: 1px solid #fff;
+      border: 1px solid var(--silver-light);
     }
 
-    .nav-links .nav-quote:hover,
-    .nav-links .nav-quote:focus-visible {
-      background: transparent;
-      color: #fff;
+    .nav-links .nav-quote:hover {
+      background: #fff;
+      color: var(--ink);
     }
 
     .menu-toggle {
       display: none;
     }
 
-    /* DARK HERO */
+    /* HERO */
 
     .hero {
       position: relative;
@@ -191,7 +191,7 @@
     }
 
     .eyebrow {
-      color: #bdbdbd;
+      color: #c2c6ce;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 2.5px;
@@ -211,14 +211,14 @@
       max-width: 650px;
       font-size: 19px;
       line-height: 1.75;
-      color: #dedede;
+      color: #e0e2e6;
       margin: 0;
     }
 
     .hero-actions {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
+      flex-wrap: wrap;
       gap: 12px;
       margin-top: 30px;
     }
@@ -229,30 +229,30 @@
       justify-content: center;
       min-height: 48px;
       padding: 13px 22px;
-      background: #fff;
-      color: var(--black);
+      background: var(--silver-light);
+      color: var(--ink);
       font-size: 14px;
       font-weight: 700;
       text-decoration: none;
       text-align: center;
-      border: 1px solid #fff;
+      border: 1px solid var(--silver-light);
       transition: background .2s ease, color .2s ease;
     }
 
     .button:hover {
-      background: transparent;
-      color: #fff;
+      background: #fff;
+      color: var(--ink);
     }
 
     .button-secondary {
       background: transparent;
       color: #fff;
-      border-color: #777;
+      border-color: #9298a2;
     }
 
     .button-secondary:hover {
-      background: #fff;
-      color: var(--black);
+      background: var(--silver-light);
+      color: var(--ink);
     }
 
     a:focus-visible,
@@ -261,11 +261,12 @@
       outline-offset: 4px;
     }
 
-    /* GENERAL SECTIONS */
+    /* SECTION STRUCTURE */
 
     main > section {
       position: relative;
       padding: 95px 0;
+      border-top: 1px solid var(--line);
     }
 
     h2 {
@@ -277,23 +278,15 @@
 
     .intro {
       max-width: 690px;
+      color: #d9dce2;
       font-size: 18px;
       line-height: 1.75;
     }
 
-    /* LIGHT SERVICES SECTION */
+    /* SERVICES */
 
-    .section-light {
-      background: var(--white);
-      color: var(--ink);
-    }
-
-    .section-light .eyebrow {
-      color: #555;
-    }
-
-    .section-light .intro {
-      color: var(--muted-dark);
+    .services-section {
+      background: var(--surface);
     }
 
     .services {
@@ -305,34 +298,41 @@
 
     .service {
       min-width: 0;
-      background: var(--card);
+      position: relative;
+      background: linear-gradient(
+        145deg,
+        #e1e3e7 0%,
+        #c9cdd4 48%,
+        #b9bec7 100%
+      );
       color: var(--ink);
-      border: 1px solid var(--line-light);
+      border: 1px solid #e8e9ec;
+      border-radius: 10px;
       padding: 36px;
-      transition: border-color .2s ease, transform .2s ease,
+      box-shadow: 0 8px 26px rgba(0,0,0,.18);
+      transition: transform .2s ease,
                   box-shadow .2s ease;
     }
 
     .service:hover {
-      border-color: #777;
       transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, .07);
+      box-shadow: 0 15px 35px rgba(0,0,0,.3);
     }
 
     .service-link {
       display: block;
       text-decoration: none;
-      color: inherit;
+      color: var(--ink);
     }
 
     .service-link:focus-visible {
-      outline: 2px solid var(--ink);
-      outline-offset: 3px;
+      outline: 3px solid #fff;
+      outline-offset: 4px;
     }
 
     .service-number {
       font-size: 12px;
-      color: #666;
+      color: #454a53;
       font-weight: 700;
     }
 
@@ -341,16 +341,17 @@
       line-height: 1.25;
       margin: 25px 0 14px;
       letter-spacing: -.7px;
+      color: #13161b;
     }
 
     .service-link h3::after {
       content: " ↗";
       font-size: 18px;
-      color: #666;
+      color: #454a53;
     }
 
     .service p {
-      color: #505050;
+      color: #2b3038;
       margin: 0;
       font-size: 16px;
       line-height: 1.7;
@@ -360,35 +361,42 @@
       display: inline-block;
       margin-top: 18px;
       padding: 7px 12px;
-      border: 1px solid #777;
-      color: var(--ink);
+      border: 1px solid #69707b;
+      border-radius: 4px;
+      color: #15191f;
       font-size: 13px;
       font-weight: 700;
     }
 
-    /* FEATURED DIGITAL HEALTH CHECK */
+    /* FEATURED PRODUCT */
 
     .health-feature {
-      background: var(--charcoal);
-      color: #fff;
-      border-top: 1px solid var(--line-dark);
-      border-bottom: 1px solid var(--line-dark);
+      background: #0d0f13;
+    }
+
+    .health-panel {
+      background: linear-gradient(
+        130deg,
+        #252932 0%,
+        #1a1d24 60%,
+        #30343d 100%
+      );
+      border: 1px solid #5d636d;
+      border-radius: 14px;
+      padding: 52px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.28);
     }
 
     .health-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr);
-      gap: 60px;
+      grid-template-columns: minmax(0, 1.5fr) minmax(220px, 1fr);
+      gap: 50px;
       align-items: center;
-    }
-
-    .health-feature .eyebrow {
-      color: #bdbdbd;
     }
 
     .health-feature p {
       max-width: 610px;
-      color: #d6d6d6;
+      color: #e1e3e8;
       font-size: 17px;
       line-height: 1.8;
     }
@@ -399,11 +407,12 @@
       font-weight: 800;
       line-height: 1;
       letter-spacing: -.07em;
+      color: #f4f5f7;
     }
 
     .health-price-caption {
       margin: 12px 0 0;
-      color: #cfcfcf;
+      color: #d2d5dc;
       font-size: 14px;
     }
 
@@ -411,33 +420,50 @@
       margin-top: 16px;
     }
 
-    /* LIGHT ABOUT SECTION */
+    /* ABOUT */
 
     .about-section {
-      background: var(--paper);
-      color: var(--ink);
-    }
-
-    .about-section .eyebrow {
-      color: #555;
+      background: var(--surface);
     }
 
     .about-content {
-      max-width: 800px;
+      max-width: 850px;
     }
 
-    .about-content > p {
-      color: #454545;
+    .about-panel {
+      background: linear-gradient(
+        145deg,
+        #e0e2e6 0%,
+        #c9cdd4 60%,
+        #bdc2ca 100%
+      );
+      border: 1px solid #e9eaed;
+      border-radius: 12px;
+      padding: 42px;
+      box-shadow: 0 12px 35px rgba(0,0,0,.2);
+    }
+
+    .about-panel > p {
+      color: #272c34;
       font-size: 17px;
       line-height: 1.85;
       margin: 0 0 22px;
     }
 
+    .about-panel > p:last-child {
+      margin-bottom: 0;
+    }
+
     .about-inspiration {
-      margin-top: 48px;
-      padding: 32px;
-      background: #fff;
-      border: 1px solid var(--line-light);
+      margin-top: 24px;
+      padding: 34px;
+      background: linear-gradient(
+        140deg,
+        #252932,
+        #191c23
+      );
+      border: 1px solid #555b66;
+      border-radius: 12px;
     }
 
     .about-inspiration h3 {
@@ -445,30 +471,29 @@
       line-height: 1.2;
       letter-spacing: -.04em;
       margin: 14px 0 22px;
+      color: #fff;
     }
 
     .about-inspiration p {
-      color: #454545;
+      color: #e0e2e7;
       font-size: 16px;
       line-height: 1.8;
       margin: 0 0 18px;
     }
 
     .about-inspiration .about-statement {
-      color: var(--ink);
+      color: #fff;
       font-weight: 700;
       font-size: 19px;
       line-height: 1.5;
       margin: 28px 0 0;
     }
 
-    /* DARK CONTACT SECTION */
+    /* CONTACT */
 
     .contact {
-      background: var(--black);
-      color: #fff;
+      background: #090a0d;
       text-align: center;
-      border-top: 1px solid var(--line-dark);
     }
 
     .contact .container {
@@ -476,7 +501,7 @@
     }
 
     .contact p {
-      color: #d0d0d0;
+      color: #d6d9df;
       font-size: 17px;
       line-height: 1.75;
     }
@@ -494,10 +519,10 @@
     /* FOOTER */
 
     footer {
-      background: var(--black);
+      background: #090a0d;
       padding: 30px 0;
-      border-top: 1px solid var(--line-dark);
-      color: #bdbdbd;
+      border-top: 1px solid var(--line);
+      color: #c0c4cb;
       font-size: 13px;
     }
 
@@ -529,7 +554,11 @@
       }
 
       .health-grid {
-        gap: 35px;
+        gap: 30px;
+      }
+
+      .health-panel {
+        padding: 36px;
       }
     }
 
@@ -564,7 +593,7 @@
         padding: 9px 12px;
         background: transparent;
         color: #fff;
-        border: 1px solid #777;
+        border: 1px solid #777e89;
         cursor: pointer;
         font-size: 14px;
         font-weight: 700;
@@ -592,7 +621,7 @@
         align-items: stretch;
         gap: 0;
         padding: 8px 0 18px;
-        border-top: 1px solid var(--line-dark);
+        border-top: 1px solid var(--line);
       }
 
       .nav-links.is-open {
@@ -605,14 +634,14 @@
         min-height: 48px;
         padding: 12px 4px;
         font-size: 15px;
-        border-bottom: 1px solid #252525;
+        border-bottom: 1px solid #292d35;
       }
 
       .nav-links .nav-quote {
         justify-content: center;
         margin-top: 14px;
         padding: 13px 18px;
-        border: 1px solid #fff;
+        border: 1px solid var(--silver-light);
       }
 
       .hero {
@@ -668,6 +697,7 @@
 
       .service {
         padding: 25px 23px;
+        border-radius: 9px;
       }
 
       .service h3 {
@@ -679,9 +709,13 @@
         font-size: 15px;
       }
 
+      .health-panel {
+        padding: 26px 22px;
+      }
+
       .health-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 24px;
       }
 
       .health-feature p {
@@ -696,14 +730,17 @@
         width: 100%;
       }
 
-      .about-content > p {
+      .about-panel {
+        padding: 25px 22px;
+      }
+
+      .about-panel > p {
         font-size: 16px;
         line-height: 1.8;
       }
 
       .about-inspiration {
-        padding: 24px 21px;
-        margin-top: 34px;
+        padding: 25px 22px;
       }
 
       .about-inspiration h3 {
@@ -744,8 +781,11 @@
         font-size: 35px;
       }
 
-      .service {
-        padding: 22px 19px;
+      .service,
+      .about-panel,
+      .about-inspiration,
+      .health-panel {
+        padding: 21px 18px;
       }
 
       .service h3 {
@@ -846,12 +886,14 @@
 
   </div>
 
-  <!-- SERVICES — LIGHT -->
+  <!-- SERVICES -->
 
-  <section id="services" class="section-light">
+  <section id="services" class="services-section">
     <div class="container">
 
-      <div class="eyebrow">01 / What we do</div>
+      <div class="eyebrow">
+        01 / What we do
+      </div>
 
       <h2>
         Digital solutions.<br>
@@ -956,51 +998,57 @@
     </div>
   </section>
 
-  <!-- FEATURED PRODUCT — DARK -->
+  <!-- FEATURED PRODUCT -->
 
   <section class="health-feature"
            aria-labelledby="health-feature-title">
-    <div class="container health-grid">
+    <div class="container">
 
-      <div>
-        <div class="eyebrow">
-          02 / Featured Service
+      <div class="health-panel">
+        <div class="health-grid">
+
+          <div>
+            <div class="eyebrow">
+              02 / Featured Service
+            </div>
+
+            <h2 id="health-feature-title">
+              The Sedigi<br>
+              Digital Health Check.
+            </h2>
+
+            <p>
+              Find out what's working, what's holding your
+              business back and where your biggest
+              opportunities lie.
+            </p>
+
+            <p>
+              Receive a personalised 10-page review of your
+              business's online presence, with practical
+              recommendations you can act on.
+            </p>
+
+            <a class="button"
+               href="/services/digital-health-check/">
+              Explore the Digital Health Check ↗
+            </a>
+          </div>
+
+          <div>
+            <div class="health-price">£49</div>
+            <p class="health-price-caption">
+              One-off review. No subscription.
+            </p>
+          </div>
+
         </div>
-
-        <h2 id="health-feature-title">
-          The Sedigi<br>
-          Digital Health Check.
-        </h2>
-
-        <p>
-          Find out what's working, what's holding your
-          business back and where your biggest
-          opportunities lie.
-        </p>
-
-        <p>
-          Receive a personalised 10-page review of your
-          business's online presence, with practical
-          recommendations you can act on.
-        </p>
-
-        <a class="button"
-           href="/services/digital-health-check/">
-          Explore the Digital Health Check ↗
-        </a>
-      </div>
-
-      <div>
-        <div class="health-price">£49</div>
-        <p class="health-price-caption">
-          One-off review. No subscription.
-        </p>
       </div>
 
     </div>
   </section>
 
-  <!-- ABOUT — LIGHT -->
+  <!-- ABOUT -->
 
   <section id="about" class="about-section">
     <div class="container">
@@ -1016,42 +1064,46 @@
 
       <div class="about-content">
 
-        <p>
-          Sedigi is an independent digital business built on a
-          simple belief: good work, honest communication and
-          reliability should never be complicated.
-        </p>
+        <div class="about-panel">
 
-        <p>
-          Our foundations are built on over a decade of practical
-          experience across different areas of business, from
-          administration and operations to marketing, technology
-          and digital systems.
-        </p>
+          <p>
+            Sedigi is an independent digital business built on a
+            simple belief: good work, honest communication and
+            reliability should never be complicated.
+          </p>
 
-        <p>
-          Along the way, we've learnt that the best solutions
-          aren't always the most expensive or complicated.
-          They're the ones that genuinely make a difference.
-        </p>
+          <p>
+            Our foundations are built on over a decade of practical
+            experience across different areas of business, from
+            administration and operations to marketing, technology
+            and digital systems.
+          </p>
 
-        <p>
-          We believe in working hard, taking pride in what we
-          do and treating every project with the same level
-          of care and attention, regardless of its size.
-        </p>
+          <p>
+            Along the way, we've learnt that the best solutions
+            aren't always the most expensive or complicated.
+            They're the ones that genuinely make a difference.
+          </p>
 
-        <p>
-          We're not interested in promising the world or selling
-          services that businesses don't need. We'd rather have
-          an honest conversation, understand what you're trying
-          to achieve and find a practical way to help.
-        </p>
+          <p>
+            We believe in working hard, taking pride in what we
+            do and treating every project with the same level
+            of care and attention, regardless of its size.
+          </p>
 
-        <p>
-          Sedigi may be a new name, but the experience,
-          commitment and values behind it are anything but new.
-        </p>
+          <p>
+            We're not interested in promising the world or selling
+            services that businesses don't need. We'd rather have
+            an honest conversation, understand what you're trying
+            to achieve and find a practical way to help.
+          </p>
+
+          <p>
+            Sedigi may be a new name, but the experience,
+            commitment and values behind it are anything but new.
+          </p>
+
+        </div>
 
         <div class="about-inspiration">
 
@@ -1091,7 +1143,7 @@
     </div>
   </section>
 
-  <!-- CONTACT — DARK -->
+  <!-- CONTACT -->
 
   <section id="contact" class="contact">
     <div class="container">
