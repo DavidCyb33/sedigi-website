@@ -4,16 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090909">
+  <meta name="theme-color" content="#090a0d">
 
   <title>Sedigi | Websites, Branding, SEO & Digital Solutions</title>
   <meta name="description" content="Sedigi provides website design, branding, social media content, automation, SEO, GEO, AI imagery and £49 Digital Health Checks for businesses across the UK.">
   <link rel="canonical" href="https://sedigi.co.uk/">
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5">
-
   <link rel="stylesheet" href="/assets/services.css?v=space-dust-1">
 
-  <!-- Social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Sedigi">
   <meta property="og:title" content="Sedigi | Reliable by Nature. Digital by Design.">
@@ -29,7 +27,6 @@
   <meta name="twitter:description" content="Reliable by Nature. Digital by Design.">
   <meta name="twitter:image" content="https://sedigi.co.uk/assets/sedigi-social-preview.png">
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,7 +67,6 @@
       --silver-light: #e0e2e6;
       --silver-dark: #aeb4be;
       --ink: #171a20;
-      --ink-soft: #30343c;
       --white: #f7f8fa;
       --muted: #d0d3da;
       --line: #343840;
@@ -83,7 +79,6 @@
     }
 
     html {
-      scroll-behaviour: smooth;
       scroll-behavior: smooth;
       scroll-padding-top: 90px;
     }
@@ -103,6 +98,7 @@
     }
 
     img {
+      display: block;
       max-width: 100%;
       height: auto;
     }
@@ -116,7 +112,14 @@
       margin-inline: auto;
     }
 
-    /* NAVIGATION */
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px;
+    }
+
+    /* HEADER */
 
     .site-header {
       position: relative;
@@ -141,9 +144,7 @@
     }
 
     .logo-image {
-      display: block;
       width: 145px;
-      height: auto;
       max-height: 55px;
       object-fit: contain;
     }
@@ -162,8 +163,7 @@
       transition: color .2s ease;
     }
 
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
+    .nav-links a:hover {
       color: #fff;
     }
 
@@ -255,13 +255,7 @@
       color: var(--ink);
     }
 
-    a:focus-visible,
-    button:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 4px;
-    }
-
-    /* SECTION STRUCTURE */
+    /* GENERAL SECTIONS */
 
     main > section {
       position: relative;
@@ -283,92 +277,229 @@
       line-height: 1.75;
     }
 
-    /* SERVICES */
+    /* EXPANDABLE SERVICES */
 
     .services-section {
       background: var(--surface);
     }
 
-    .services {
+    .service-categories {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
-      margin-top: 48px;
+      margin-top: 45px;
     }
 
-    .service {
+    .service-category {
       min-width: 0;
-      position: relative;
+      overflow: hidden;
       background: linear-gradient(
         145deg,
         #e1e3e7 0%,
         #c9cdd4 48%,
         #b9bec7 100%
       );
-      color: var(--ink);
       border: 1px solid #e8e9ec;
-      border-radius: 10px;
-      padding: 36px;
-      box-shadow: 0 8px 26px rgba(0,0,0,.18);
-      transition: transform .2s ease,
-                  box-shadow .2s ease;
-    }
-
-    .service:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(0,0,0,.3);
-    }
-
-    .service-link {
-      display: block;
-      text-decoration: none;
+      border-radius: 12px;
       color: var(--ink);
+      box-shadow: 0 8px 26px rgba(0,0,0,.18);
     }
 
-    .service-link:focus-visible {
-      outline: 3px solid #fff;
-      outline-offset: 4px;
+    .service-category summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 29px 34px;
+      cursor: pointer;
+      list-style: none;
     }
 
-    .service-number {
+    .service-category summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .category-number {
+      display: block;
+      margin-bottom: 8px;
+      color: #454a53;
       font-size: 12px;
-      color: #454a53;
       font-weight: 700;
     }
 
-    .service h3 {
-      font-size: clamp(21px, 2.5vw, 25px);
-      line-height: 1.25;
-      margin: 25px 0 14px;
-      letter-spacing: -.7px;
-      color: #13161b;
-    }
-
-    .service-link h3::after {
-      content: " ↗";
-      font-size: 18px;
-      color: #454a53;
-    }
-
-    .service p {
-      color: #2b3038;
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    .service-price {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 7px 12px;
-      border: 1px solid #69707b;
-      border-radius: 4px;
+    .category-name {
+      display: block;
       color: #15191f;
-      font-size: 13px;
+      font-size: clamp(23px, 3vw, 32px);
       font-weight: 700;
+      letter-spacing: -.045em;
+      line-height: 1.2;
     }
 
-    /* FEATURED PRODUCT */
+    .category-subtitle {
+      display: block;
+      margin-top: 8px;
+      color: #303640;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .category-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border: 1px solid #777f8b;
+      border-radius: 50%;
+      color: #171a20;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .category-toggle::before {
+      content: "+";
+    }
+
+    .service-category[open] .category-toggle::before {
+      content: "−";
+    }
+
+    .category-body {
+      padding: 0 34px 34px;
+    }
+
+    .category-divider {
+      height: 1px;
+      margin-bottom: 28px;
+      background: #939aa5;
+    }
+
+    /* PORTFOLIO AREA */
+
+    .portfolio-preview {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .portfolio-visual {
+      display: flex;
+      min-height: 240px;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      overflow: hidden;
+      border: 1px solid #454b56;
+      border-radius: 9px;
+      background:
+        radial-gradient(
+          ellipse at 70% 25%,
+          rgba(205,212,225,.18),
+          transparent 48%
+        ),
+        linear-gradient(
+          145deg,
+          #303640,
+          #171b23 65%,
+          #101217
+        );
+      color: #f4f5f7;
+      text-align: center;
+    }
+
+    .portfolio-placeholder {
+      width: 100%;
+      max-width: 330px;
+    }
+
+    .portfolio-placeholder span {
+      display: block;
+      color: #bfc5cf;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .portfolio-placeholder strong {
+      display: block;
+      margin: 18px 0;
+      color: #f5f6f8;
+      font-size: clamp(25px, 3vw, 38px);
+      line-height: 1.15;
+      letter-spacing: -.05em;
+    }
+
+    .portfolio-placeholder small {
+      display: block;
+      color: #d4d8df;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .portfolio-description h3 {
+      margin: 0 0 12px;
+      color: #171a20;
+      font-size: 24px;
+      line-height: 1.25;
+      letter-spacing: -.035em;
+    }
+
+    .portfolio-description p {
+      margin: 0 0 12px;
+      color: #303640;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .portfolio-description .preview-note {
+      font-size: 13px;
+      color: #454b54;
+    }
+
+    /* INDIVIDUAL SERVICE LINKS */
+
+    .category-services {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .category-service-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      min-height: 70px;
+      padding: 17px 20px;
+      background: rgba(255,255,255,.47);
+      border: 1px solid rgba(65,72,84,.25);
+      border-radius: 7px;
+      color: #171a20;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-decoration: none;
+      transition: background .2s ease;
+    }
+
+    .category-service-link:hover {
+      background: rgba(255,255,255,.82);
+    }
+
+    .category-service-link:focus-visible {
+      outline: 3px solid #171a20;
+    }
+
+    .category-service-link .arrow {
+      flex-shrink: 0;
+      font-size: 19px;
+    }
+
+    /* FEATURED DIGITAL HEALTH CHECK */
 
     .health-feature {
       background: #0d0f13;
@@ -549,16 +680,16 @@
         padding: 95px 0 105px;
       }
 
-      .service {
-        padding: 28px;
-      }
-
       .health-grid {
         gap: 30px;
       }
 
       .health-panel {
         padding: 36px;
+      }
+
+      .portfolio-preview {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -641,7 +772,6 @@
         justify-content: center;
         margin-top: 14px;
         padding: 13px 18px;
-        border: 1px solid var(--silver-light);
       }
 
       .hero {
@@ -689,24 +819,55 @@
         font-size: 16px;
       }
 
-      .services {
-        grid-template-columns: 1fr;
-        gap: 14px;
+      .service-categories {
         margin-top: 32px;
+        gap: 13px;
       }
 
-      .service {
-        padding: 25px 23px;
-        border-radius: 9px;
+      .service-category summary {
+        padding: 23px 20px;
+        gap: 12px;
       }
 
-      .service h3 {
+      .category-name {
+        font-size: 23px;
+      }
+
+      .category-subtitle {
+        font-size: 14px;
+      }
+
+      .category-toggle {
+        width: 36px;
+        height: 36px;
         font-size: 22px;
-        margin: 18px 0 12px;
       }
 
-      .service p {
+      .category-body {
+        padding: 0 20px 22px;
+      }
+
+      .portfolio-visual {
+        min-height: 205px;
+        padding: 22px;
+      }
+
+      .portfolio-description h3 {
+        font-size: 22px;
+      }
+
+      .portfolio-description p {
         font-size: 15px;
+      }
+
+      .category-services {
+        grid-template-columns: 1fr;
+      }
+
+      .category-service-link {
+        min-height: 62px;
+        padding: 15px 17px;
+        font-size: 14px;
       }
 
       .health-panel {
@@ -770,8 +931,6 @@
       }
     }
 
-    /* SMALL PHONES */
-
     @media (max-width: 380px) {
       .container {
         width: calc(100% - 30px);
@@ -781,19 +940,20 @@
         font-size: 35px;
       }
 
-      .service,
+      .service-category summary {
+        padding: 20px 16px;
+      }
+
+      .category-body {
+        padding: 0 16px 18px;
+      }
+
       .about-panel,
       .about-inspiration,
       .health-panel {
         padding: 21px 18px;
       }
-
-      .service h3 {
-        font-size: 20px;
-      }
     }
-
-    /* REDUCED MOTION */
 
     @media (prefers-reduced-motion: reduce) {
       html {
@@ -801,13 +961,9 @@
       }
 
       .button,
-      .service,
+      .category-service-link,
       .nav-links a {
         transition: none;
-      }
-
-      .service:hover {
-        transform: none;
       }
     }
   </style>
@@ -886,119 +1042,331 @@
 
   </div>
 
-  <!-- SERVICES -->
+  <!-- EXPANDABLE SERVICES -->
 
   <section id="services" class="services-section">
     <div class="container">
 
-      <div class="eyebrow">
-        01 / What we do
-      </div>
+      <div class="eyebrow">01 / What we do</div>
 
       <h2>
-        Digital solutions.<br>
-        Without the complexity.
+        Explore what<br>
+        Sedigi can do.
       </h2>
 
       <p class="intro">
-        Practical digital services designed around your business.
-        Whether you're starting something new or improving
-        existing systems, we focus on solutions that work.
+        From building your brand to making everyday work
+        simpler, discover practical digital services
+        designed around your business.
       </p>
 
-      <div class="services">
+      <div class="service-categories">
 
-        <a class="service service-link"
-           href="/services/branding-logo-design/">
-          <div class="service-number">01 /</div>
-          <h3>Branding &amp; Logo Design</h3>
-          <p>
-            Distinctive logos, brand identities and visual assets
-            that help your business make the right impression.
-          </p>
-        </a>
+        <!-- CATEGORY 1 -->
 
-        <a class="service service-link"
-           href="/services/social-media-design-content/">
-          <div class="service-number">02 /</div>
-          <h3>Social Media Design &amp; Content</h3>
-          <p>
-            Professional graphics, branded templates and
-            engaging content tailored to your audience.
-          </p>
-        </a>
+        <details class="service-category" open>
+          <summary>
+            <span>
+              <span class="category-number">01 /</span>
+              <span class="category-name">
+                Brand &amp; Creative
+              </span>
+              <span class="category-subtitle">
+                Branding, social media content and AI imagery
+              </span>
+            </span>
 
-        <a class="service service-link"
-           href="/services/website-design/">
-          <div class="service-number">03 /</div>
-          <h3>Website Design &amp; Development</h3>
-          <p>
-            Modern, responsive websites designed around your
-            business, your customers and your goals.
-          </p>
-        </a>
+            <span class="category-toggle"
+                  aria-hidden="true"></span>
+          </summary>
 
-        <a class="service service-link"
-           href="/services/automation-business-tools/">
-          <div class="service-number">04 /</div>
-          <h3>Automation &amp; Business Tools</h3>
-          <p>
-            Custom spreadsheets, reporting dashboards and
-            practical automation to simplify everyday tasks.
-          </p>
-        </a>
+          <div class="category-body">
+            <div class="category-divider"></div>
 
-        <a class="service service-link"
-           href="/services/seo-geo-content/">
-          <div class="service-number">05 /</div>
-          <h3>SEO, GEO &amp; Content Creation</h3>
-          <p>
-            Search optimisation, blog writing and content
-            designed for traditional and AI-powered discovery.
-          </p>
-        </a>
+            <div class="portfolio-preview">
 
-        <a class="service service-link"
-           href="/services/business-documents-templates/">
-          <div class="service-number">06 /</div>
-          <h3>Business Documents &amp; Templates</h3>
-          <p>
-            Professional reports, proposals, presentations,
-            branded templates and email signatures.
-          </p>
-        </a>
+              <div class="portfolio-visual">
+                <div class="portfolio-placeholder">
+                  <span>Creative Portfolio</span>
+                  <strong>
+                    Identity.<br>
+                    Expression.<br>
+                    Impact.
+                  </strong>
+                  <small>
+                    Sedigi creative work showcase
+                  </small>
+                </div>
+              </div>
 
-        <a class="service service-link"
-           href="/services/ai-imagery-creative-design/">
-          <div class="service-number">07 /</div>
-          <h3>AI Imagery &amp; Creative Design</h3>
-          <p>
-            High-quality AI-generated visuals for websites,
-            marketing campaigns and creative projects.
-          </p>
-        </a>
+              <div class="portfolio-description">
+                <h3>
+                  Make the right first impression.
+                </h3>
 
-        <a class="service service-link"
-           href="/services/digital-health-check/">
-          <div class="service-number">08 /</div>
-          <h3>Digital Health Check</h3>
-          <p>
-            Discover how your business performs online with
-            a personalised 10-page review covering your
-            website, search visibility, credibility and
-            opportunities for improvement.
-          </p>
-          <span class="service-price">
-            £49 / One-off review
-          </span>
-        </a>
+                <p>
+                  From memorable branding to engaging
+                  visual content, we help businesses
+                  communicate with confidence.
+                </p>
+
+                <p class="preview-note">
+                  Portfolio examples will appear here
+                  once the approved imagery is ready.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="category-services">
+
+              <a class="category-service-link"
+                 href="/services/branding-logo-design/">
+                <span>Branding &amp; Logo Design</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a class="category-service-link"
+                 href="/services/social-media-design-content/">
+                <span>Social Media Design &amp; Content</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a class="category-service-link"
+                 href="/services/ai-imagery-creative-design/">
+                <span>AI Imagery &amp; Creative Design</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+
+            </div>
+          </div>
+        </details>
+
+        <!-- CATEGORY 2 -->
+
+        <details class="service-category">
+          <summary>
+            <span>
+              <span class="category-number">02 /</span>
+              <span class="category-name">
+                Websites &amp; Visibility
+              </span>
+              <span class="category-subtitle">
+                Website design, SEO, GEO and content
+              </span>
+            </span>
+
+            <span class="category-toggle"
+                  aria-hidden="true"></span>
+          </summary>
+
+          <div class="category-body">
+            <div class="category-divider"></div>
+
+            <div class="portfolio-preview">
+
+              <div class="portfolio-visual">
+                <div class="portfolio-placeholder">
+                  <span>Web &amp; Search</span>
+                  <strong>
+                    Designed<br>
+                    to be found.
+                  </strong>
+                  <small>
+                    Responsive websites and
+                    digital visibility
+                  </small>
+                </div>
+              </div>
+
+              <div class="portfolio-description">
+                <h3>
+                  Look professional. Get discovered.
+                </h3>
+
+                <p>
+                  We build modern websites and create
+                  useful content that helps customers
+                  find and understand your business.
+                </p>
+
+                <p class="preview-note">
+                  Website and mobile mock-ups
+                  will be featured here.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="category-services">
+
+              <a class="category-service-link"
+                 href="/services/website-design/">
+                <span>Website Design &amp; Development</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a class="category-service-link"
+                 href="/services/seo-geo-content/">
+                <span>SEO, GEO &amp; Content Creation</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+
+            </div>
+          </div>
+        </details>
+
+        <!-- CATEGORY 3 -->
+
+        <details class="service-category">
+          <summary>
+            <span>
+              <span class="category-number">03 /</span>
+              <span class="category-name">
+                Business Systems
+              </span>
+              <span class="category-subtitle">
+                Automation, dashboards and reporting
+              </span>
+            </span>
+
+            <span class="category-toggle"
+                  aria-hidden="true"></span>
+          </summary>
+
+          <div class="category-body">
+            <div class="category-divider"></div>
+
+            <div class="portfolio-preview">
+
+              <div class="portfolio-visual">
+                <div class="portfolio-placeholder">
+                  <span>Business Systems</span>
+                  <strong>
+                    Less admin.<br>
+                    More progress.
+                  </strong>
+                  <small>
+                    Practical tools and
+                    smarter workflows
+                  </small>
+                </div>
+              </div>
+
+              <div class="portfolio-description">
+                <h3>
+                  Make your systems work harder.
+                </h3>
+
+                <p>
+                  Reduce repetitive tasks, organise
+                  information and turn complicated
+                  data into practical insights.
+                </p>
+
+                <p class="preview-note">
+                  Dashboard and automation examples
+                  will be displayed here.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="category-services">
+
+              <a class="category-service-link"
+                 href="/services/automation-business-tools/">
+                <span>Automation &amp; Business Tools</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+
+            </div>
+          </div>
+        </details>
+
+        <!-- CATEGORY 4 -->
+
+        <details class="service-category">
+          <summary>
+            <span>
+              <span class="category-number">04 /</span>
+              <span class="category-name">
+                Professional Support
+              </span>
+              <span class="category-subtitle">
+                Documents, templates and digital reviews
+              </span>
+            </span>
+
+            <span class="category-toggle"
+                  aria-hidden="true"></span>
+          </summary>
+
+          <div class="category-body">
+            <div class="category-divider"></div>
+
+            <div class="portfolio-preview">
+
+              <div class="portfolio-visual">
+                <div class="portfolio-placeholder">
+                  <span>Professional Support</span>
+                  <strong>
+                    Clarity.<br>
+                    Confidence.<br>
+                    Direction.
+                  </strong>
+                  <small>
+                    Professional documents
+                    and digital reviews
+                  </small>
+                </div>
+              </div>
+
+              <div class="portfolio-description">
+                <h3>
+                  The details make a difference.
+                </h3>
+
+                <p>
+                  From polished business documents
+                  to practical digital reviews,
+                  we help you present your business
+                  professionally and identify
+                  opportunities for improvement.
+                </p>
+
+                <p class="preview-note">
+                  The £49 Digital Health Check
+                  sample report will feature here.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="category-services">
+
+              <a class="category-service-link"
+                 href="/services/business-documents-templates/">
+                <span>Business Documents &amp; Templates</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a class="category-service-link"
+                 href="/services/digital-health-check/">
+                <span>Digital Health Check — £49</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+
+            </div>
+          </div>
+        </details>
 
       </div>
 
     </div>
   </section>
 
-  <!-- FEATURED PRODUCT -->
+  <!-- FEATURED DIGITAL HEALTH CHECK -->
 
   <section class="health-feature"
            aria-labelledby="health-feature-title">
@@ -1018,15 +1386,16 @@
             </h2>
 
             <p>
-              Find out what's working, what's holding your
-              business back and where your biggest
+              Find out what's working, what's holding
+              your business back and where your biggest
               opportunities lie.
             </p>
 
             <p>
-              Receive a personalised 10-page review of your
-              business's online presence, with practical
-              recommendations you can act on.
+              Receive a personalised 10-page review
+              of your business's online presence,
+              with practical recommendations
+              you can act on.
             </p>
 
             <a class="button"
@@ -1188,42 +1557,60 @@
     const toggle = document.querySelector(".menu-toggle");
     const navigation = document.querySelector("#primary-navigation");
 
-    if (!toggle || !navigation) return;
+    if (toggle && navigation) {
+      function closeMenu() {
+        navigation.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation menu");
+        toggle.querySelector(".menu-text").textContent = "Menu";
+      }
 
-    function closeMenu() {
-      navigation.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Open navigation menu");
-      toggle.querySelector(".menu-text").textContent = "Menu";
+      toggle.addEventListener("click", function () {
+        const isOpen = navigation.classList.toggle("is-open");
+
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+
+        toggle.querySelector(".menu-text").textContent =
+          isOpen ? "Close" : "Menu";
+      });
+
+      navigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 700) {
+          closeMenu();
+        }
+      });
     }
 
-    toggle.addEventListener("click", function () {
-      const isOpen = navigation.classList.toggle("is-open");
+    /* Keep only one service category expanded at a time */
 
-      toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-      );
+    const categories = document.querySelectorAll(
+      ".service-category"
+    );
 
-      toggle.querySelector(".menu-text").textContent =
-        isOpen ? "Close" : "Menu";
-    });
+    categories.forEach(function (category) {
+      category.addEventListener("toggle", function () {
+        if (!category.open) return;
 
-    navigation.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        closeMenu();
-      }
-    });
-
-    window.addEventListener("resize", function () {
-      if (window.innerWidth > 700) {
-        closeMenu();
-      }
+        categories.forEach(function (other) {
+          if (other !== category) {
+            other.open = false;
+          }
+        });
+      });
     });
   })();
 </script>
