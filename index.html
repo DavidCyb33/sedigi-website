@@ -10,6 +10,8 @@
   <meta name="description" content="Sedigi provides website design, branding, social media content, automation, SEO, GEO, AI imagery and £49 Digital Health Checks for businesses across the UK.">
   <link rel="canonical" href="https://sedigi.co.uk/">
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5">
+
+  <!-- Existing space-dust styling -->
   <link rel="stylesheet" href="/assets/services.css?v=space-dust-1">
 
   <!-- Social sharing -->
@@ -28,6 +30,7 @@
   <meta name="twitter:description" content="Reliable by Nature. Digital by Design.">
   <meta name="twitter:image" content="https://sedigi.co.uk/assets/sedigi-social-preview.png">
 
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,11 +64,16 @@
 
   <style>
     :root {
-      --bg: #090909;
-      --panel: #141414;
-      --line: #303030;
-      --text: #f5f5f5;
-      --muted: #b0b0b0;
+      --black: #090909;
+      --charcoal: #171717;
+      --white: #f5f4f1;
+      --paper: #f0efeb;
+      --card: #ffffff;
+      --ink: #171717;
+      --muted-dark: #505050;
+      --muted-light: #d0d0d0;
+      --line-dark: #303030;
+      --line-light: #deddd9;
     }
 
     *,
@@ -82,8 +90,8 @@
     body {
       margin: 0;
       min-width: 0;
-      background: var(--bg);
-      color: var(--text);
+      background: var(--black);
+      color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
       overflow-wrap: break-word;
@@ -112,8 +120,8 @@
     .site-header {
       position: relative;
       z-index: 20;
-      background: var(--bg);
-      border-bottom: 1px solid var(--line);
+      background: var(--black);
+      border-bottom: 1px solid var(--line-dark);
     }
 
     .site-nav {
@@ -146,7 +154,7 @@
     }
 
     .nav-links a {
-      color: var(--muted);
+      color: #d0d0d0;
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
@@ -160,7 +168,7 @@
 
     .nav-links .nav-quote {
       background: #fff;
-      color: #090909;
+      color: var(--black);
       padding: 11px 17px;
       border: 1px solid #fff;
     }
@@ -175,14 +183,15 @@
       display: none;
     }
 
-    /* HERO */
+    /* DARK HERO */
 
     .hero {
+      position: relative;
       padding: 120px 0 130px;
     }
 
     .eyebrow {
-      color: var(--muted);
+      color: #bdbdbd;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 2.5px;
@@ -202,14 +211,14 @@
       max-width: 650px;
       font-size: 19px;
       line-height: 1.75;
-      color: var(--muted);
+      color: #dedede;
       margin: 0;
     }
 
     .hero-actions {
       display: flex;
-      align-items: center;
       flex-wrap: wrap;
+      align-items: center;
       gap: 12px;
       margin-top: 30px;
     }
@@ -221,13 +230,13 @@
       min-height: 48px;
       padding: 13px 22px;
       background: #fff;
-      color: #090909;
+      color: var(--black);
       font-size: 14px;
       font-weight: 700;
       text-decoration: none;
+      text-align: center;
       border: 1px solid #fff;
       transition: background .2s ease, color .2s ease;
-      text-align: center;
     }
 
     .button:hover {
@@ -238,25 +247,25 @@
     .button-secondary {
       background: transparent;
       color: #fff;
-      border-color: #666;
+      border-color: #777;
     }
 
     .button-secondary:hover {
       background: #fff;
-      color: #090909;
+      color: var(--black);
     }
 
     a:focus-visible,
     button:focus-visible {
-      outline: 2px solid #fff;
+      outline: 2px solid currentColor;
       outline-offset: 4px;
     }
 
-    /* SECTIONS */
+    /* GENERAL SECTIONS */
 
     main > section {
+      position: relative;
       padding: 95px 0;
-      border-top: 1px solid var(--line);
     }
 
     h2 {
@@ -268,12 +277,24 @@
 
     .intro {
       max-width: 690px;
-      color: var(--muted);
       font-size: 18px;
       line-height: 1.75;
     }
 
-    /* SERVICES */
+    /* LIGHT SERVICES SECTION */
+
+    .section-light {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .section-light .eyebrow {
+      color: #555;
+    }
+
+    .section-light .intro {
+      color: var(--muted-dark);
+    }
 
     .services {
       display: grid;
@@ -284,15 +305,18 @@
 
     .service {
       min-width: 0;
-      background: var(--panel);
-      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border: 1px solid var(--line-light);
       padding: 36px;
-      transition: border-color .2s ease, transform .2s ease;
+      transition: border-color .2s ease, transform .2s ease,
+                  box-shadow .2s ease;
     }
 
     .service:hover {
-      border-color: #888;
-      transform: translateY(-2px);
+      border-color: #777;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .07);
     }
 
     .service-link {
@@ -302,13 +326,14 @@
     }
 
     .service-link:focus-visible {
-      outline: 2px solid #fff;
+      outline: 2px solid var(--ink);
       outline-offset: 3px;
     }
 
     .service-number {
       font-size: 12px;
-      color: #999;
+      color: #666;
+      font-weight: 700;
     }
 
     .service h3 {
@@ -321,11 +346,11 @@
     .service-link h3::after {
       content: " ↗";
       font-size: 18px;
-      color: #aaa;
+      color: #666;
     }
 
     .service p {
-      color: var(--muted);
+      color: #505050;
       margin: 0;
       font-size: 16px;
       line-height: 1.7;
@@ -335,20 +360,74 @@
       display: inline-block;
       margin-top: 18px;
       padding: 7px 12px;
-      border: 1px solid #666;
-      color: #fff;
+      border: 1px solid #777;
+      color: var(--ink);
       font-size: 13px;
       font-weight: 700;
     }
 
-    /* ABOUT */
+    /* FEATURED DIGITAL HEALTH CHECK */
+
+    .health-feature {
+      background: var(--charcoal);
+      color: #fff;
+      border-top: 1px solid var(--line-dark);
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .health-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr);
+      gap: 60px;
+      align-items: center;
+    }
+
+    .health-feature .eyebrow {
+      color: #bdbdbd;
+    }
+
+    .health-feature p {
+      max-width: 610px;
+      color: #d6d6d6;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .health-price {
+      display: inline-block;
+      font-size: clamp(70px, 9vw, 110px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -.07em;
+    }
+
+    .health-price-caption {
+      margin: 12px 0 0;
+      color: #cfcfcf;
+      font-size: 14px;
+    }
+
+    .health-feature .button {
+      margin-top: 16px;
+    }
+
+    /* LIGHT ABOUT SECTION */
+
+    .about-section {
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .about-section .eyebrow {
+      color: #555;
+    }
 
     .about-content {
       max-width: 800px;
     }
 
     .about-content > p {
-      color: var(--muted);
+      color: #454545;
       font-size: 17px;
       line-height: 1.85;
       margin: 0 0 22px;
@@ -357,8 +436,8 @@
     .about-inspiration {
       margin-top: 48px;
       padding: 32px;
-      background: var(--panel);
-      border: 1px solid var(--line);
+      background: #fff;
+      border: 1px solid var(--line-light);
     }
 
     .about-inspiration h3 {
@@ -369,24 +448,27 @@
     }
 
     .about-inspiration p {
-      color: var(--muted);
+      color: #454545;
       font-size: 16px;
       line-height: 1.8;
       margin: 0 0 18px;
     }
 
     .about-inspiration .about-statement {
-      color: #fff;
+      color: var(--ink);
       font-weight: 700;
       font-size: 19px;
       line-height: 1.5;
       margin: 28px 0 0;
     }
 
-    /* CONTACT */
+    /* DARK CONTACT SECTION */
 
     .contact {
+      background: var(--black);
+      color: #fff;
       text-align: center;
+      border-top: 1px solid var(--line-dark);
     }
 
     .contact .container {
@@ -394,7 +476,7 @@
     }
 
     .contact p {
-      color: var(--muted);
+      color: #d0d0d0;
       font-size: 17px;
       line-height: 1.75;
     }
@@ -412,9 +494,10 @@
     /* FOOTER */
 
     footer {
+      background: var(--black);
       padding: 30px 0;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
+      border-top: 1px solid var(--line-dark);
+      color: #bdbdbd;
       font-size: 13px;
     }
 
@@ -443,6 +526,10 @@
 
       .service {
         padding: 28px;
+      }
+
+      .health-grid {
+        gap: 35px;
       }
     }
 
@@ -477,7 +564,7 @@
         padding: 9px 12px;
         background: transparent;
         color: #fff;
-        border: 1px solid #555;
+        border: 1px solid #777;
         cursor: pointer;
         font-size: 14px;
         font-weight: 700;
@@ -505,7 +592,7 @@
         align-items: stretch;
         gap: 0;
         padding: 8px 0 18px;
-        border-top: 1px solid var(--line);
+        border-top: 1px solid var(--line-dark);
       }
 
       .nav-links.is-open {
@@ -590,6 +677,23 @@
 
       .service p {
         font-size: 15px;
+      }
+
+      .health-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .health-feature p {
+        font-size: 16px;
+      }
+
+      .health-price {
+        font-size: 76px;
+      }
+
+      .health-feature .button {
+        width: 100%;
       }
 
       .about-content > p {
@@ -742,14 +846,12 @@
 
   </div>
 
-  <!-- SERVICES -->
+  <!-- SERVICES — LIGHT -->
 
-  <section id="services">
+  <section id="services" class="section-light">
     <div class="container">
 
-      <div class="eyebrow">
-        01 / What we do
-      </div>
+      <div class="eyebrow">01 / What we do</div>
 
       <h2>
         Digital solutions.<br>
@@ -764,135 +866,86 @@
 
       <div class="services">
 
-        <!-- SERVICE 01 -->
-
-        <a
-          class="service service-link"
-          href="/services/branding-logo-design/"
-        >
+        <a class="service service-link"
+           href="/services/branding-logo-design/">
           <div class="service-number">01 /</div>
-
           <h3>Branding &amp; Logo Design</h3>
-
           <p>
             Distinctive logos, brand identities and visual assets
             that help your business make the right impression.
           </p>
         </a>
 
-        <!-- SERVICE 02 -->
-
-        <a
-          class="service service-link"
-          href="/services/social-media-design-content/"
-        >
+        <a class="service service-link"
+           href="/services/social-media-design-content/">
           <div class="service-number">02 /</div>
-
           <h3>Social Media Design &amp; Content</h3>
-
           <p>
             Professional graphics, branded templates and
             engaging content tailored to your audience.
           </p>
         </a>
 
-        <!-- SERVICE 03 -->
-
-        <a
-          class="service service-link"
-          href="/services/website-design/"
-        >
+        <a class="service service-link"
+           href="/services/website-design/">
           <div class="service-number">03 /</div>
-
           <h3>Website Design &amp; Development</h3>
-
           <p>
             Modern, responsive websites designed around your
             business, your customers and your goals.
           </p>
         </a>
 
-        <!-- SERVICE 04 -->
-
-        <a
-          class="service service-link"
-          href="/services/automation-business-tools/"
-        >
+        <a class="service service-link"
+           href="/services/automation-business-tools/">
           <div class="service-number">04 /</div>
-
           <h3>Automation &amp; Business Tools</h3>
-
           <p>
             Custom spreadsheets, reporting dashboards and
             practical automation to simplify everyday tasks.
           </p>
         </a>
 
-        <!-- SERVICE 05 -->
-
-        <a
-          class="service service-link"
-          href="/services/seo-geo-content/"
-        >
+        <a class="service service-link"
+           href="/services/seo-geo-content/">
           <div class="service-number">05 /</div>
-
           <h3>SEO, GEO &amp; Content Creation</h3>
-
           <p>
             Search optimisation, blog writing and content
             designed for traditional and AI-powered discovery.
           </p>
         </a>
 
-        <!-- SERVICE 06 -->
-
-        <a
-          class="service service-link"
-          href="/services/business-documents-templates/"
-        >
+        <a class="service service-link"
+           href="/services/business-documents-templates/">
           <div class="service-number">06 /</div>
-
           <h3>Business Documents &amp; Templates</h3>
-
           <p>
             Professional reports, proposals, presentations,
             branded templates and email signatures.
           </p>
         </a>
 
-        <!-- SERVICE 07 -->
-
-        <a
-          class="service service-link"
-          href="/services/ai-imagery-creative-design/"
-        >
+        <a class="service service-link"
+           href="/services/ai-imagery-creative-design/">
           <div class="service-number">07 /</div>
-
           <h3>AI Imagery &amp; Creative Design</h3>
-
           <p>
             High-quality AI-generated visuals for websites,
             marketing campaigns and creative projects.
           </p>
         </a>
 
-        <!-- SERVICE 08 -->
-
-        <a
-          class="service service-link"
-          href="/services/digital-health-check/"
-        >
+        <a class="service service-link"
+           href="/services/digital-health-check/">
           <div class="service-number">08 /</div>
-
           <h3>Digital Health Check</h3>
-
           <p>
             Discover how your business performs online with
             a personalised 10-page review covering your
             website, search visibility, credibility and
             opportunities for improvement.
           </p>
-
           <span class="service-price">
             £49 / One-off review
           </span>
@@ -903,13 +956,57 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- FEATURED PRODUCT — DARK -->
 
-  <section id="about">
+  <section class="health-feature"
+           aria-labelledby="health-feature-title">
+    <div class="container health-grid">
+
+      <div>
+        <div class="eyebrow">
+          02 / Featured Service
+        </div>
+
+        <h2 id="health-feature-title">
+          The Sedigi<br>
+          Digital Health Check.
+        </h2>
+
+        <p>
+          Find out what's working, what's holding your
+          business back and where your biggest
+          opportunities lie.
+        </p>
+
+        <p>
+          Receive a personalised 10-page review of your
+          business's online presence, with practical
+          recommendations you can act on.
+        </p>
+
+        <a class="button"
+           href="/services/digital-health-check/">
+          Explore the Digital Health Check ↗
+        </a>
+      </div>
+
+      <div>
+        <div class="health-price">£49</div>
+        <p class="health-price-caption">
+          One-off review. No subscription.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT — LIGHT -->
+
+  <section id="about" class="about-section">
     <div class="container">
 
       <div class="eyebrow">
-        02 / About Sedigi
+        03 / About Sedigi
       </div>
 
       <h2>
@@ -994,13 +1091,13 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT — DARK -->
 
   <section id="contact" class="contact">
     <div class="container">
 
       <div class="eyebrow">
-        03 / Get in touch
+        04 / Get in touch
       </div>
 
       <h2>Let's make digital simpler.</h2>
@@ -1028,13 +1125,9 @@
 
 <footer>
   <div class="container footer-inner">
-
     <span>© 2026 Sedigi. All rights reserved.</span>
-
     <a href="/privacy/">Privacy Policy</a>
-
     <span>Reliable by Nature. Digital by Design.</span>
-
   </div>
 </footer>
 
